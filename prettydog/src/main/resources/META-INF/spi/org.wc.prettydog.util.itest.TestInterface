@@ -1,0 +1,4 @@
+#Test SPI
+org.wc.prettydog.util.itest.TestInterfaceImpl
+org.wc.prettydog.util.itest.TestInterfaceImpl1
+org.wc.prettydog.util.itest.TestInterfaceImpl12

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.wc.prettydog.db.dao.CSequenceMapper">
+  <resultMap id="BaseResultMap" type="org.wc.prettydog.db.pojo.CSequence">
+    <result column="seq_no" jdbcType="VARCHAR" property="seqNo" />
+    <result column="step_sz" jdbcType="INTEGER" property="stepSz" />
+    <result column="seq_rule" jdbcType="VARCHAR" property="seqRule" />
+    <result column="max_val" jdbcType="INTEGER" property="maxVal" />
+    <result column="cache_sz" jdbcType="INTEGER" property="cacheSz" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="base_query">
+    <if test="seqNo != null">
+      AND seq_no=#{seqNo,jdbcType=VARCHAR}
+    </if>
+    <if test="stepSz != null">
+      AND step_sz=#{stepSz,jdbcType=INTEGER}
+    </if>
+    <if test="seqRule != null">
+      AND seq_rule=#{seqRule,jdbcType=VARCHAR}
+    </if>
+    <if test="maxVal != null">
+      AND max_val=#{maxVal,jdbcType=INTEGER}
+    </if>
+    <if test="cacheSz != null">
+      AND cache_sz=#{cacheSz,jdbcType=INTEGER}
+    </if>
+    <if test="updateTime != null">
+      AND update_time=#{updateTime,jdbcType=TIMESTAMP}
+    </if>
+    <if test="createTime != null">
+      AND create_time=#{createTime,jdbcType=TIMESTAMP}
+    </if>
+  </sql>
+  <insert id="insert" parameterType="org.wc.prettydog.db.pojo.CSequence">
+    insert into c_sequence (seq_no, step_sz, seq_rule, 
+      max_val, cache_sz, update_time, 
+      create_time)
+    values (#{seqNo,jdbcType=VARCHAR}, #{stepSz,jdbcType=INTEGER}, #{seqRule,jdbcType=VARCHAR}, 
+      #{maxVal,jdbcType=INTEGER}, #{cacheSz,jdbcType=INTEGER}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="org.wc.prettydog.db.pojo.CSequence">
+    insert into c_sequence
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="seqNo != null">
+        seq_no,
+      </if>
+      <if test="stepSz != null">
+        step_sz,
+      </if>
+      <if test="seqRule != null">
+        seq_rule,
+      </if>
+      <if test="maxVal != null">
+        max_val,
+      </if>
+      <if test="cacheSz != null">
+        cache_sz,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="seqNo != null">
+        #{seqNo,jdbcType=VARCHAR},
+      </if>
+      <if test="stepSz != null">
+        #{stepSz,jdbcType=INTEGER},
+      </if>
+      <if test="seqRule != null">
+        #{seqRule,jdbcType=VARCHAR},
+      </if>
+      <if test="maxVal != null">
+        #{maxVal,jdbcType=INTEGER},
+      </if>
+      <if test="cacheSz != null">
+        #{cacheSz,jdbcType=INTEGER},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="select" parameterType="org.wc.prettydog.db.pojo.CSequence"
+    resultMap="BaseResultMap">
+    select * from c_sequence
+      <where>
+        <include refid="base_query"></include>
+      </where>
+  </select>
+  <select id="selectOne" parameterType="org.wc.prettydog.db.pojo.CSequence"
+          resultMap="BaseResultMap">
+    select * from c_sequence
+    <where>
+      <include refid="base_query"></include>
+    </where>
+    limit 1
+  </select>
+</mapper>

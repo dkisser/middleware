@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.wc.prettydog.db.dao.CSequenceDetailMapper">
+  <resultMap id="BaseResultMap" type="org.wc.prettydog.db.pojo.CSequenceDetail">
+    <result column="seq_no" jdbcType="VARCHAR" property="seqNo" />
+    <result column="current_val" jdbcType="INTEGER" property="currentVal" />
+    <result column="allocated" jdbcType="INTEGER" property="allocated" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="update_selective">
+    <set>
+      <trim suffixOverrides=",">
+        <if test="currentVal != null">
+          current_val = #{currentVal,jdbcType=INTEGER},
+        </if>
+        <if test="allocated != null">
+          allocated = #{allocated,jdbcType=INTEGER},
+        </if>
+        <if test="updateTime != null">
+          update_time = #{updateTime,jdbcType=TIMESTAMP},
+        </if>
+        <if test="createTime != null">
+          create_time = #{createTime,jdbcType=TIMESTAMP},
+        </if>
+      </trim>
+    </set>
+    where seq_no = #{seqNo,jdbcType=VARCHAR}
+  </sql>
+  <sql id="base_query">
+    <if test="seqNo != null">
+      AND seq_no=#{seqNo,jdbcType=VARCHAR}
+    </if>
+    <if test="currentVal != null">
+      AND current_val=#{currentVal,jdbcType=INTEGER}
+    </if>
+    <if test="allocated != null">
+      AND allocated=#{allocated,jdbcType=INTEGER}
+    </if>
+    <if test="updateTime != null">
+      AND update_time=#{updateTime,jdbcType=TIMESTAMP}
+    </if>
+    <if test="createTime != null">
+      AND create_time=#{createTime,jdbcType=TIMESTAMP}
+    </if>
+  </sql>
+  <insert id="insert" parameterType="org.wc.prettydog.db.pojo.CSequenceDetail">
+    insert into c_sequence_detail (seq_no, current_val, allocated, 
+      update_time, create_time)
+    values (#{seqNo,jdbcType=VARCHAR}, #{currentVal,jdbcType=INTEGER}, #{allocated,jdbcType=INTEGER}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="org.wc.prettydog.db.pojo.CSequenceDetail">
+    insert into c_sequence_detail
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="seqNo != null">
+        seq_no,
+      </if>
+      <if test="currentVal != null">
+        current_val,
+      </if>
+      <if test="allocated != null">
+        allocated,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="seqNo != null">
+        #{seqNo,jdbcType=VARCHAR},
+      </if>
+      <if test="currentVal != null">
+        #{currentVal,jdbcType=INTEGER},
+      </if>
+      <if test="allocated != null">
+        #{allocated,jdbcType=INTEGER},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="select" parameterType="org.wc.prettydog.db.pojo.CSequenceDetail"
+    resultMap="BaseResultMap">
+    select * from c_sequence_detail
+      <where>
+        <include refid="base_query"></include>
+      </where>
+  </select>
+  <select id="selectOne" parameterType="org.wc.prettydog.db.pojo.CSequenceDetail"
+    resultMap="BaseResultMap">
+    select * from c_sequence_detail
+      <where>
+        <include refid="base_query"></include>
+      </where>
+      limit 1
+  </select>
+  <update id="updateSelectiveBySeqNo" parameterType="org.wc.prettydog.db.pojo.CSequenceDetail">
+    update c_sequence_detail <include refid="update_selective"></include>
+  </update>
+</mapper>
