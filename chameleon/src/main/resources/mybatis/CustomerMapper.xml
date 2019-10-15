@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.wc.chameleon.db.dao.CustomerMapper">
+  <resultMap id="BaseResultMap" type="org.wc.chameleon.db.pojo.Customer">
+    <result column="ID" jdbcType="INTEGER" property="id" />
+    <result column="UNAME" jdbcType="VARCHAR" property="uname" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="PHONE" jdbcType="VARCHAR" property="phone" />
+    <result column="ADDRESS" jdbcType="VARCHAR" property="address" />
+  </resultMap>
+  <insert id="insert" parameterType="org.wc.chameleon.db.pojo.Customer">
+    insert into customer (ID, UNAME, NAME, 
+      PHONE, ADDRESS)
+    values (#{id,jdbcType=INTEGER}, #{uname,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{phone,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.wc.chameleon.db.pojo.Customer">
+    insert into customer
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        ID,
+      </if>
+      <if test="uname != null">
+        UNAME,
+      </if>
+      <if test="name != null">
+        NAME,
+      </if>
+      <if test="phone != null">
+        PHONE,
+      </if>
+      <if test="address != null">
+        ADDRESS,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="uname != null">
+        #{uname,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="select" parameterType="org.wc.chameleon.db.pojo.Customer"
+  resultMap="BaseResultMap">
+    select * from customer
+  </select>
+</mapper>

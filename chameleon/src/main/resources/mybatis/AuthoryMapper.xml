@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.wc.chameleon.db.dao.AuthoryMapper">
+  <resultMap id="BaseResultMap" type="org.wc.chameleon.db.pojo.Authory">
+    <result column="Id" jdbcType="INTEGER" property="id" />
+    <result column="power" jdbcType="INTEGER" property="power" />
+  </resultMap>
+  <insert id="insert" parameterType="org.wc.chameleon.db.pojo.Authory">
+    insert into authory (Id, power)
+    values (#{id,jdbcType=INTEGER}, #{power,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="org.wc.chameleon.db.pojo.Authory">
+    insert into authory
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        Id,
+      </if>
+      <if test="power != null">
+        power,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="power != null">
+        #{power,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+</mapper>

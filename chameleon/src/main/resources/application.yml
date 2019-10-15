@@ -3,13 +3,28 @@ server:
 
 spring:
   application:
-    name: auth-server
+    name: chameleon
   datasource:
-    #数据库链接配置
-    url: jdbc:mysql://localhost:3306/auth?useUnicode=true&characterEncoding=utf-8
-    username: root
-    password: 123456
-    driver-class-name: com.mysql.jdbc.Driver
+    #多数据源配置
+#    jdbc-url: jdbc:mysql://localhost:3306/6ha?useUnicode=true&characterEncoding=utf-8
+#    username: root
+#    password: 123456
+#    driver-class-name: com.mysql.jdbc.Driver
+    master:
+      jdbc-url: jdbc:mysql://localhost:3306/6ha?useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+    slave1:
+      jdbc-url: jdbc:mysql://localhost:3306/byb?useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+    slave2:
+      jdbc-url: jdbc:mysql://localhost:3306/eshop?useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
     #数据库连接池配置
     type: com.alibaba.druid.pool.DruidDataSource
     initialSize:  5
@@ -40,4 +55,4 @@ logging:
       apache:
         tomcat: info
       wc:
-        prettydog: info
+        chameleon: info
