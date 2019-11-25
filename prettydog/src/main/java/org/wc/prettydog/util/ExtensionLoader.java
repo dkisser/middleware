@@ -30,7 +30,7 @@ public class ExtensionLoader<T> {
 
     private ConcurrentHashMap<String,T> singletone;
 
-    private boolean init;
+    private volatile boolean init;
 
     private ClassLoader classLoader;
 
@@ -62,6 +62,11 @@ public class ExtensionLoader<T> {
     public T getByExtensionId (String id){
         checkInit();
         return id != null ? getOrCreateInstance(id): null;
+    }
+
+    public Class<T> getClassByExtensionId (String id){
+        checkInit();
+        return id != null ? extensionClass.getOrDefault(id,null):null;
     }
 
     private void checkInit (){
@@ -181,7 +186,7 @@ public class ExtensionLoader<T> {
         }
         try {
             if (prototype){
-                    instance = clazz.newInstance();
+                instance = clazz.newInstance();
             } else {
                 instance = getSingletonById(id);
             }

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns="http://wc.prettydog.org/schema/prettydog"
+            targetNamespace="http://wc.prettydog.org/schema/prettydog">
+
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:import namespace="http://www.springframework.org/schema/beans"/>
+    <xsd:import namespace="http://www.springframework.org/schema/tool"/>
+
+    <xsd:annotation>
+        <xsd:documentation>![CDATA[Prettydog Namespace Support]]</xsd:documentation>
+    </xsd:annotation>
+
+    <xsd:complexType name="abstractType">
+        <xsd:attribute name="id" type="xsd:string" use="optional" default="">
+            <xsd:annotation>
+                <xsd:documentation>![CDATA[Unique key]]</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="name" type="xsd:string" use="optional" default="">
+            <xsd:annotation>
+                <xsd:documentation>![CDATA[Bean name]]</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="class" type="xsd:string" use="optional" default="">
+            <xsd:annotation>
+                <xsd:documentation>![CDATA[Bean class]]</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="ref" type="xsd:string" use="optional" default="">
+            <xsd:annotation>
+                <xsd:documentation>![CDATA[Bean ref]]</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="impl" type="xsd:string" use="optional" default="">
+            <xsd:annotation>
+                <xsd:documentation>![CDATA[Interface Bean impl]]</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:complexType>
+    <xsd:element name="bean" type="abstractType">
+        <xsd:annotation>
+            <xsd:documentation>![CDATA[bean support]]</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+</xsd:schema>
