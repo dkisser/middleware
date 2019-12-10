@@ -27,10 +27,4 @@
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
-  <component name="SvnConfiguration" myUseAcceleration="nothing">
-    <configuration useDefault="false">e:\SVN\logs</configuration>
-    <option name="sshConnectionType" value="PASSWORD" />
-    <option name="sshExecutablePath" value="https://172.31.25.237/svn/repo_project_gongan/WY201509002_EPCC/2code" />
-    <option name="sshUserName" value="wenchen" />
-  </component>
 </project>

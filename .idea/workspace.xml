@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6066aaef-7478-4068-8ba6-67552bed5709" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chameleon/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chameleon/src/test/java/org/wc/chameleon/test/ApplicationTest.java" />
+    <list default="true" id="6066aaef-7478-4068-8ba6-67552bed5709" name="Default" comment="1.新增spring相关测试类2.将extensionLoader与springIOC融合，实现基于接口的动态spi3.ExtensionLoader新增getClassByExtensionId来获取class的入口">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/CyclicBarrierTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/ExchangerTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/ForkJoinPoolTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/PhraserTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/SynchonousQueueTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,28 +24,120 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="6ha" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="6ha" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ApplicationTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chameleon/src/test/java/org/wc/chameleon/test/ApplicationTest.java">
+      <file leaf-file-name="ExchangerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/ExchangerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="1474">
+              <caret line="73" column="51" lean-forward="false" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#961#962#0" expanded="false" />
+                <element signature="e#1011#1012#0" expanded="false" />
+                <element signature="e#1667#1668#0" expanded="false" />
+                <element signature="e#1717#1718#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/chameleon/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="44">
-                <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="ForkJoinPoolTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/ForkJoinPoolTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1056">
+              <caret line="55" column="8" lean-forward="false" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1429#1430#0" expanded="false" />
+                <element signature="e#1508#1509#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SynchonousQueueTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/SynchonousQueueTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="792">
+              <caret line="39" column="47" lean-forward="false" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PhraserTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/PhraserTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="880">
+              <caret line="43" column="12" lean-forward="false" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CyclicBarrierTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/CyclicBarrierTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -53,6 +149,7 @@
       <list>
         <option value="Enum" />
         <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -61,9 +158,27 @@
     <findStrings>
       <find>jdbc</find>
       <find>Hikar</find>
+      <find>removeEldestEntry</find>
+      <find>workers</find>
+      <find>beanPostProcessors</find>
+      <find>messageSource</find>
+      <find>invokeBeanFactoryPostProcessors</find>
+      <find>DEFAULT_REFERENCE_TYPE</find>
+      <find>startupShutdownMonitor</find>
+      <find>applicationListeners</find>
+      <find>earlyApplicationListeners</find>
+      <find>initApplicationEventMulticaster</find>
+      <find>retrievalMutex</find>
+      <find>singletonObjects</find>
+      <find>resourceCaches</find>
+      <find>documentReaderClass</find>
+      <find>setChanged</find>
+      <find>parties</find>
+      <find>common</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -75,36 +190,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/prettydog/src/main/java/org/wc/prettydog/db/dao/CSequenceDetailMapper.java" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/TinyCat/pom.xml" />
-        <option value="$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/DBType.java" />
-        <option value="$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/DataSourceSelector.java" />
-        <option value="$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/config/MybatisConfig.java" />
-        <option value="$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/config/DynmicDataSourceAop.java" />
-        <option value="$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/annotation/Master.java" />
-        <option value="$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/config/ApplicationConfig.java" />
-        <option value="$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/config/DynamicDataSourceConfiguration.java" />
-        <option value="$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/config/AopConfig.java" />
-        <option value="$PROJECT_DIR$/chameleon/src/main/resources/mybatis/CustomerMapper.xml" />
-        <option value="$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/service/CustomerService.java" />
-        <option value="$PROJECT_DIR$/prettydog/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/spring/xml/PrettydogBeanDefinition.java" />
+        <option value="E:/Maven/repository/org/springframework/spring-beans/5.1.6.RELEASE/spring-beans-5.1.6.RELEASE.jar!/org/springframework/beans/factory/config/BeanDefinition.class" />
+        <option value="E:/Maven/repository/org/springframework/spring-beans/5.1.6.RELEASE/spring-beans-5.1.6.RELEASE.jar!/org/springframework/beans/factory/support/RootBeanDefinition.class" />
+        <option value="E:/Maven/repository/org/springframework/spring-beans/5.1.6.RELEASE/spring-beans-5.1.6.RELEASE.jar!/org/springframework/beans/factory/support/GenericBeanDefinition.class" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/resources/META-INF/spring.handlers" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/spring/xml/prettydog.xsd" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/spring/BeanDefiinitionTest.java" />
+        <option value="E:/Maven/repository/org/springframework/spring-beans/5.1.6.RELEASE/spring-beans-5.1.6.RELEASE.jar!/META-INF/license.txt" />
+        <option value="E:/Maven/repository/org/springframework/spring-beans/5.1.6.RELEASE/spring-beans-5.1.6.RELEASE.jar!/META-INF/MANIFEST.MF" />
+        <option value="E:/Maven/repository/org/springframework/spring-beans/5.1.6.RELEASE/spring-beans-5.1.6.RELEASE.jar!/META-INF/notice.txt" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/resources/META-INF/spring.schemas" />
+        <option value="$PROJECT_DIR$/prettydog/src/main/java/org/wc/prettydog/util/ExtensionLoader.java" />
+        <option value="E:/Maven/repository/org/springframework/spring-beans/5.1.6.RELEASE/spring-beans-5.1.6.RELEASE.jar!/org/springframework/beans/factory/xml/NamespaceHandlerSupport.class" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/spring/xml/PrettydogBeanDefinitionParser.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/resources/META-INF/prettydog.xsd" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/resources/prettydog.xml" />
+        <option value="$PROJECT_DIR$/prettydog/src/main/java/org/wc/prettydog/support/spring/xml/PrettydogNamespaceSupport.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/main/resources/META-INF/spring.handlers" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/spring/DefaultListableBeanFactoryTest.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/spring/ResourceTest.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/spring/xml/BeanDefiinitionTest.java" />
         <option value="$PROJECT_DIR$/prettydog/pom.xml" />
-        <option value="$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/DynamicRouteDataSource.java" />
-        <option value="$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/db/dao/CustomerMapper.java" />
-        <option value="$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/ChameleonStart.java" />
-        <option value="$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/config/DynamicMybatisConfig.java" />
-        <option value="$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/DynmicDataSourceAop.java" />
-        <option value="$PROJECT_DIR$/chameleon/src/main/java/org/wc/controller/TestController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/chameleon/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/chameleon/src/main/resources/generatorConfig.xml" />
-        <option value="$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/db/dao/AuthoryMapper.java" />
-        <option value="$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/service/AuthoryServie.java" />
-        <option value="$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/service/AuthoryService.java" />
-        <option value="$PROJECT_DIR$/chameleon/src/test/java/org/wc/chameleon/test/ApplicationTest.java" />
-        <option value="$PROJECT_DIR$/chameleon/pom.xml" />
-        <option value="$PROJECT_DIR$/chameleon/README.md" />
+        <option value="$PROJECT_DIR$/prettydog/src/main/resources/META-INF/prettydog.xsd" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/itest/TestInterface.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/itest/TestInterfaceImpl.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/itest/TestInterfaceImpl1.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/itest/TestInterfaceImpl12.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/proxy/JdkProxyTest.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/proxy/TestInterfaceJdkProxy.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/observer/ObserverClient2.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/observer/ObserverClient1.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/observer/ObserverTest.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/observer/ObservableEntity.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/listener/ChangeEvent.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/listener/ChangeListener.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/listener/ChangeEventImpl1.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/listener/ChangeEventImpl2.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/listener/ResetEvent.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/listener/ResetEventImpl.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/listener/EventListenerClient.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/listener/TestApplicationEvent.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/listener/ListenerTest.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/listener/TestListener.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/listener/ApplicationEvent.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/listener/Listener.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/CyclicBariarTest.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/PhraserTest.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/CyclicBarrierTest.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/ForkJoinPoolTest.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/SynchonousQueueTest.java" />
+        <option value="$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/ExchangerTest.java" />
       </list>
     </option>
   </component>
@@ -123,13 +259,38 @@
     </option>
   </component>
   <component name="MavenProjectNavigator">
-    <treeState />
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="prettydog" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="prettydog" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="y" value="2" />
-    <option name="width" value="1378" />
-    <option name="height" value="733" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -140,7 +301,7 @@
       <showMembers />
       <showModules />
       <showLibraryContents />
-      <hideEmptyPackages ProjectPane="false" />
+      <hideEmptyPackages ProjectPane="true" />
       <abbreviatePackageNames />
       <autoscrollToSource />
       <autoscrollFromSource />
@@ -149,9 +310,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -174,7 +335,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="chameleon" />
+              <option name="myItemId" value="prettydog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -188,13 +349,17 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="chameleon" />
+              <option name="myItemId" value="prettydog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -206,7 +371,151 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="chameleon" />
+              <option name="myItemId" value="prettydog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prettydog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midware" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midware" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prettydog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prettydog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="concurrent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midware" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midware" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prettydog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prettydog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midware" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midware" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prettydog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prettydog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midware" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midware" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prettydog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -232,7 +541,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="chameleon" />
+              <option name="myItemId" value="prettydog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midware" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midware" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prettydog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -248,15 +587,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
+              <option name="myItemId" value="prettydog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midware" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midware" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wc" />
+              <option name="myItemId" value="prettydog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="chameleon" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prettydog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="support" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -265,7 +630,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/chameleon" />
+    <property name="last_opened_file_path" value="E:/Maven/repository/mysql/mysql-connector-java/8.0.15/mysql-connector-java-8.0.15.jar" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="settings.editor.splitter.proportion" value="0.27057078" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -274,16 +639,28 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="SearchEverywhereHistoryKey" value="SynchronousQ&#9;PSI&#9;JAVA://java.util.concurrent.SynchronousQueue&#10;ApplicationContext&#9;PSI&#9;JAVA://org.springframework.context.ApplicationContext&#10;Application&#9;null&#9;null&#10;ApplicationConte&#9;PSI&#9;JAVA://org.apache.catalina.core.ApplicationContext&#10;Abstrac&#9;FILE&#9;jar://E:/Maven/repository/org/springframework/spring-context/5.1.6.RELEASE/spring-context-5.1.6.RELEASE.jar!/org/springframework/context/support/AbstractXmlApplicationContext.class&#10;EventO&#9;PSI&#9;JAVA://java.util.EventObject&#10;File&#9;FILE&#9;jar://E:/Maven/repository/org/springframework/spring-context/5.1.6.RELEASE/spring-context-5.1.6.RELEASE.jar!/org/springframework/context/support/FileSystemXmlApplicationContext.class&#10;ResourceLoader&#9;PSI&#9;JAVA://org.springframework.core.io.ResourceLoader&#10;BeanFactory&#9;PSI&#9;JAVA://org.springframework.beans.factory.BeanFactory&#10;FactoryBean&#9;PSI&#9;JAVA://org.springframework.beans.factory.FactoryBean&#10;Resource&#9;FILE&#9;jar://D:/tools/jdk1.8.0_121/src.zip!/javax/annotation/Resource.java" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="I:\Idea Workspace\midware\prettydog\src\test\java\org\wc\prettydog\spring\xml" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.wc.chameleon" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.wc.prettydog.util.jdk.listener" />
+      <recent name="org.wc.prettydog.util.jdk.observer" />
+      <recent name="org.wc.prettydog" />
+      <recent name="org.wc.prettydog.util" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="I:\Idea Workspace\midware\chameleon" />
-      <recent name="I:\Idea Workspace\midware\chameleon\docs" />
-      <recent name="I:\Idea Workspace\midware\chameleon\src\main\resources" />
-      <recent name="I:\Idea Workspace\midware" />
+      <recent name="I:\Idea Workspace\midware\prettydog\src\main\java\org\wc\prettydog\support\spring\xml" />
+      <recent name="I:\Idea Workspace\midware\prettydog\src\main\resources\META-INF" />
+      <recent name="I:\Idea Workspace\midware\prettydog\src\test\resources\META-INF" />
+      <recent name="I:\Idea Workspace\midware\prettydog\src\test\java\org\wc\prettydog\spring" />
+      <recent name="I:\Idea Workspace\midware\prettydog\src\main\java\org\wc\prettydog\support" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -298,20 +675,118 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ApplicationTest.test">
-    <configuration default="false" name="ApplicationTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.ForkJoinPoolTest">
+    <configuration default="false" name="ExchangerTest.testExchanger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="org.wc.chameleon.test.*" />
+          <option name="PATTERN" value="org.wc.prettydog.util.jdk.util.concurrent.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <module name="chameleon" />
+      <module name="prettydog" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="org.wc.chameleon.test" />
-      <option name="MAIN_CLASS_NAME" value="org.wc.chameleon.test.ApplicationTest" />
+      <option name="PACKAGE_NAME" value="org.wc.prettydog.util.jdk.util.concurrent" />
+      <option name="MAIN_CLASS_NAME" value="org.wc.prettydog.util.jdk.util.concurrent.ExchangerTest" />
+      <option name="METHOD_NAME" value="testExchanger" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="PhraserTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.wc.prettydog.util.jdk.util.concurrent.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="prettydog" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="org.wc.prettydog.util.jdk.util.concurrent" />
+      <option name="MAIN_CLASS_NAME" value="org.wc.prettydog.util.jdk.util.concurrent.PhraserTest" />
       <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ForkJoinPoolTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.wc.prettydog.util.jdk.util.concurrent.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="org.wc.prettydog.util.jdk.util.concurrent.ForkJoinPoolTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="prettydog" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ForkJoinPoolTest.testRecursiveAction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.wc.prettydog.util.jdk.util.concurrent.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="prettydog" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="org.wc.prettydog.util.jdk.util.concurrent" />
+      <option name="MAIN_CLASS_NAME" value="org.wc.prettydog.util.jdk.util.concurrent.ForkJoinPoolTest" />
+      <option name="METHOD_NAME" value="testRecursiveAction" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ForkJoinPoolTest.testRecursiveTask" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.wc.prettydog.util.jdk.util.concurrent.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="prettydog" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="org.wc.prettydog.util.jdk.util.concurrent" />
+      <option name="MAIN_CLASS_NAME" value="org.wc.prettydog.util.jdk.util.concurrent.ForkJoinPoolTest" />
+      <option name="METHOD_NAME" value="testRecursiveTask" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -775,20 +1250,34 @@
       <envs />
       <method />
     </configuration>
-    <list size="4">
+    <list size="8">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.PrettydogApplication" />
       <item index="1" class="java.lang.String" itemvalue="Maven.chameleon-mybatis-gen" />
       <item index="2" class="java.lang.String" itemvalue="Spring Boot.chameleon" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ApplicationTest.test" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ExchangerTest.testExchanger" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.PhraserTest.test" />
+      <item index="5" class="java.lang.String" itemvalue="Application.ForkJoinPoolTest" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.ForkJoinPoolTest.testRecursiveAction" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.ForkJoinPoolTest.testRecursiveTask" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ApplicationTest.test" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.ForkJoinPoolTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ForkJoinPoolTest.testRecursiveTask" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ForkJoinPoolTest.testRecursiveAction" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ExchangerTest.testExchanger" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.PhraserTest.test" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration" myUseAcceleration="nothing">
+    <configuration useDefault="false">e:\SVN\logs</configuration>
+    <option name="sshConnectionType" value="PASSWORD" />
+    <option name="sshExecutablePath" value="https://172.31.25.237/svn/repo_project_gongan/WY201509002_EPCC/2code" />
+    <option name="sshUserName" value="wenchen" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -800,6 +1289,24 @@
       <workItem from="1565180011585" duration="3153000" />
       <workItem from="1571036036320" duration="12334000" />
       <workItem from="1571100718597" duration="6225000" />
+      <workItem from="1573437059188" duration="8135000" />
+      <workItem from="1573543062048" duration="10948000" />
+      <workItem from="1573613573488" duration="14498000" />
+      <workItem from="1573692435493" duration="13874000" />
+      <workItem from="1573730339793" duration="5100000" />
+      <workItem from="1573797546856" duration="1997000" />
+      <workItem from="1574061128625" duration="2042000" />
+      <workItem from="1574160428314" duration="749000" />
+      <workItem from="1574644211246" duration="14322000" />
+      <workItem from="1574923194964" duration="3464000" />
+      <workItem from="1575013042765" duration="3071000" />
+      <workItem from="1575251746377" duration="10471000" />
+      <workItem from="1575334259220" duration="621000" />
+      <workItem from="1575422989566" duration="21413000" />
+      <workItem from="1575507285559" duration="8471000" />
+      <workItem from="1575690247024" duration="619000" />
+      <workItem from="1575891552355" duration="1165000" />
+      <workItem from="1575975224749" duration="209000" />
     </task>
     <task id="LOCAL-00001" summary="新增chameleon">
       <created>1571132451465</created>
@@ -808,104 +1315,149 @@
       <option name="project" value="LOCAL" />
       <updated>1571132451465</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="添加模块说明">
+      <created>1571132697287</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571132697287</updated>
+    </task>
+    <task id="LOCAL-00003" summary="1.添加master-worker运算模式2.添加LRUMap实现">
+      <created>1573628121962</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573628121962</updated>
+    </task>
+    <task id="LOCAL-00004" summary="1.新增spring相关测试类2.将extensionLoader与springIOC融合，实现基于接口的动态spi3.ExtensionLoader新增getClassByExtensionId来获取class的入口">
+      <created>1574658333048</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1574658333048</updated>
+    </task>
+    <task id="LOCAL-00005" summary="BeanDefinitionTest测试类补充提交">
+      <created>1574929134386</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1574929134386</updated>
+    </task>
+    <task id="LOCAL-00006" summary="1.新增jdk工具类相关测试类">
+      <created>1575285200137</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1575285200137</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ApplicationTest_test - 2019.10.14 at 17h 34m 24s.xml">
-      <configuration name="ApplicationTest.test" configurationId="JUnit" />
+    <history-entry file="ForkJoinPoolTest_testRecursiveTask - 2019.12.05 at 10h 42m 17s.xml">
+      <configuration name="ForkJoinPoolTest.testRecursiveTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ApplicationTest_test - 2019.10.14 at 17h 40m 57s.xml">
-      <configuration name="ApplicationTest.test" configurationId="JUnit" />
+    <history-entry file="ForkJoinPoolTest_testRecursiveTask - 2019.12.05 at 10h 42m 48s.xml">
+      <configuration name="ForkJoinPoolTest.testRecursiveTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ApplicationTest_test - 2019.10.14 at 17h 42m 28s.xml">
-      <configuration name="ApplicationTest.test" configurationId="JUnit" />
+    <history-entry file="ForkJoinPoolTest_testRecursiveTask - 2019.12.05 at 10h 46m 09s.xml">
+      <configuration name="ForkJoinPoolTest.testRecursiveTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ApplicationTest_test - 2019.10.14 at 17h 43m 20s.xml">
-      <configuration name="ApplicationTest.test" configurationId="JUnit" />
+    <history-entry file="ForkJoinPoolTest_testRecursiveTask - 2019.12.05 at 10h 55m 02s.xml">
+      <configuration name="ForkJoinPoolTest.testRecursiveTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ApplicationTest_test - 2019.10.15 at 09h 07m 19s.xml">
-      <configuration name="ApplicationTest.test" configurationId="JUnit" />
+    <history-entry file="ForkJoinPoolTest_testRecursiveTask - 2019.12.05 at 10h 57m 13s.xml">
+      <configuration name="ForkJoinPoolTest.testRecursiveTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ApplicationTest_test - 2019.10.15 at 09h 36m 30s.xml">
-      <configuration name="ApplicationTest.test" configurationId="JUnit" />
+    <history-entry file="ForkJoinPoolTest_testRecursiveTask - 2019.12.05 at 11h 02m 32s.xml">
+      <configuration name="ForkJoinPoolTest.testRecursiveTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ApplicationTest_test - 2019.10.15 at 09h 41m 10s.xml">
-      <configuration name="ApplicationTest.test" configurationId="JUnit" />
+    <history-entry file="ForkJoinPoolTest_testRecursiveTask - 2019.12.05 at 11h 06m 14s.xml">
+      <configuration name="ForkJoinPoolTest.testRecursiveTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ApplicationTest_test - 2019.10.15 at 09h 48m 31s.xml">
-      <configuration name="ApplicationTest.test" configurationId="JUnit" />
+    <history-entry file="ForkJoinPoolTest_testRecursiveTask - 2019.12.05 at 11h 07m 07s.xml">
+      <configuration name="ForkJoinPoolTest.testRecursiveTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ApplicationTest_test - 2019.10.15 at 10h 02m 46s.xml">
-      <configuration name="ApplicationTest.test" configurationId="JUnit" />
+    <history-entry file="ForkJoinPoolTest_testRecursiveTask - 2019.12.05 at 11h 11m 10s.xml">
+      <configuration name="ForkJoinPoolTest.testRecursiveTask" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ForkJoinPoolTest_testRecursiveTask - 2019.12.05 at 11h 12m 16s.xml">
+      <configuration name="ForkJoinPoolTest.testRecursiveTask" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22083000" />
+    <option name="totallyTimeSpent" value="145004000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="2" width="1378" height="733" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18664643" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32933104" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1860817" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852808" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45104894" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43053174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49475524" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32933104" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31046313" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2572079" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33131617" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1732224" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32761577" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32761577" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18664643" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18664643" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24659607" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852808" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45104894" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4425386" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49475524" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2572079" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-    </layout>
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31118882" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2677761" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -915,7 +1467,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="新增chameleon" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增chameleon" />
+    <MESSAGE value="添加模块说明" />
+    <MESSAGE value="1.添加master-worker运算模式2.添加LRUMap实现" />
+    <MESSAGE value="1.新增spring相关测试类2.将extensionLoader与springIOC融合，实现基于接口的动态spi3.ExtensionLoader新增getClassByExtensionId来获取class的入口" />
+    <MESSAGE value="BeanDefinitionTest测试类补充提交" />
+    <MESSAGE value="1.新增jdk工具类相关测试类" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.新增jdk工具类相关测试类" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -927,13 +1484,31 @@
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/DynmicDataSourceAop.java</url>
-          <line>33</line>
+          <url>file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/proxy/TestInterfaceJdkProxy.java</url>
+          <line>23</line>
           <properties />
-          <option name="timeStamp" value="15" />
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/ForkJoinPoolTest.java</url>
+          <line>61</line>
+          <properties />
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/ForkJoinPoolTest.java</url>
+          <line>72</line>
+          <properties />
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/ForkJoinPoolTest.java</url>
+          <line>80</line>
+          <properties />
+          <option name="timeStamp" value="51" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="16" />
+      <option name="time" value="52" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -942,413 +1517,351 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/prettydog/src/main/java/org/wc/prettydog/db/dao/CSequenceDetailMapper.java">
+    <entry file="jar://D:/tools/jdk1.8.0_121/src.zip!/java/util/EventObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="114">
+          <caret line="38" column="13" lean-forward="false" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prettydog/pom.xml">
+    <entry file="file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/listener/ChangeEventImpl2.java" />
+    <entry file="file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/listener/ChangeEventImpl1.java" />
+    <entry file="file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/listener/ResetEventImpl.java" />
+    <entry file="file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/listener/EventListenerClient.java" />
+    <entry file="file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/listener/ChangeEvent.java" />
+    <entry file="jar://E:/Maven/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.17/tomcat-embed-core-9.0.17.jar!/org/apache/catalina/core/ApplicationContext.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1078">
-          <caret line="49" column="49" lean-forward="false" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prettydog/src/main/java/org/wc/prettydog/db/dao/CSequenceDetailMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TinyCat/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prettydog/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/Maven/repository/org/springframework/boot/spring-boot/2.1.4.RELEASE/spring-boot-2.1.4.RELEASE.jar!/org/springframework/boot/jdbc/DataSourceBuilder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Maven/repository/org/springframework/boot/spring-boot-starter-test/2.1.4.RELEASE/spring-boot-starter-test-2.1.4.RELEASE.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1276">
-          <caret line="35" column="52" lean-forward="false" selection-start-line="35" selection-start-column="52" selection-end-line="35" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/tools/jdk1.8.0_121/src.zip!/javax/sql/DataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="76" column="17" lean-forward="false" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/tools/jdk1.8.0_121/src.zip!/javax/annotation/Resource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14">
-          <caret line="54" column="18" lean-forward="false" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/Maven/repository/org/springframework/boot/spring-boot/2.1.4.RELEASE/spring-boot-2.1.4.RELEASE.jar!/org/springframework/boot/context/properties/ConfigurationProperties.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/Maven/repository/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/2.0.1/mybatis-spring-boot-autoconfigure-2.0.1.jar!/org/mybatis/spring/boot/autoconfigure/MybatisProperties.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="53" column="16" lean-forward="false" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/Maven/repository/org/aspectj/aspectjweaver/1.9.2/aspectjweaver-1.9.2.jar!/org/aspectj/lang/annotation/Aspect.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/config/AopConfig.java" />
-    <entry file="file://$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/DBType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chameleon/src/main/resources/mybatis/CustomerMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="51" column="11" lean-forward="true" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="124">
+          <caret line="69" column="13" lean-forward="false" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/prettydog/src/main/java/org/wc/prettydog/PrettydogApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/Maven/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.17/tomcat-embed-core-9.0.17.jar!/org/apache/catalina/core/ApplicationFilterConfig.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/Maven/repository/org/springframework/spring-beans/5.1.6.RELEASE/spring-beans-5.1.6.RELEASE.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
-          <caret line="1214" column="0" lean-forward="false" selection-start-line="1214" selection-start-column="0" selection-end-line="1214" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/Maven/repository/org/springframework/spring-context/5.1.6.RELEASE/spring-context-5.1.6.RELEASE.jar!/org/springframework/validation/beanvalidation/LocalValidatorFactoryBean.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="185" column="0" lean-forward="false" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prettydog/src/main/java/org/wc/prettydog/util/ConcurrentCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prettydog/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-382">
-          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+        <state relative-caret-position="183">
+          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prettydog/pom.xml">
+    <entry file="jar://E:/Maven/repository/org/springframework/boot/spring-boot/2.1.4.RELEASE/spring-boot-2.1.4.RELEASE.jar!/org/springframework/boot/SpringApplication.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-66">
+          <caret line="64" column="13" lean-forward="false" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Maven/repository/org/springframework/spring-context/5.1.6.RELEASE/spring-context-5.1.6.RELEASE.jar!/org/springframework/context/ApplicationEventPublisher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Maven/repository/org/springframework/spring-context/5.1.6.RELEASE/spring-context-5.1.6.RELEASE.jar!/org/springframework/context/ConfigurableApplicationContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Maven/repository/org/springframework/spring-context/5.1.6.RELEASE/spring-context-5.1.6.RELEASE.jar!/org/springframework/context/ApplicationContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="14" column="129" lean-forward="false" selection-start-line="14" selection-start-column="129" selection-end-line="14" selection-end-column="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Maven/repository/org/springframework/boot/spring-boot/2.1.4.RELEASE/spring-boot-2.1.4.RELEASE.jar!/org/springframework/boot/context/event/ApplicationEnvironmentPreparedEvent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Maven/repository/org/springframework/boot/spring-boot/2.1.4.RELEASE/spring-boot-2.1.4.RELEASE.jar!/org/springframework/boot/context/FileEncodingApplicationListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="24" column="55" lean-forward="false" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Maven/repository/org/springframework/boot/spring-boot/2.1.4.RELEASE/spring-boot-2.1.4.RELEASE.jar!/org/springframework/boot/context/logging/ClasspathLoggingApplicationListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Maven/repository/org/springframework/spring-context/5.1.6.RELEASE/spring-context-5.1.6.RELEASE.jar!/org/springframework/context/ApplicationEvent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Maven/repository/org/springframework/spring-context/5.1.6.RELEASE/spring-context-5.1.6.RELEASE.jar!/org/springframework/context/support/AbstractApplicationContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="98" column="33" lean-forward="true" selection-start-line="98" selection-start-column="33" selection-end-line="98" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Maven/repository/org/springframework/spring-context/5.1.6.RELEASE/spring-context-5.1.6.RELEASE.jar!/org/springframework/context/ApplicationListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="10" column="57" lean-forward="true" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Maven/repository/org/springframework/boot/spring-boot/2.1.4.RELEASE/spring-boot-2.1.4.RELEASE.jar!/org/springframework/boot/context/config/ConfigFileApplicationListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="87" column="49" lean-forward="false" selection-start-line="87" selection-start-column="17" selection-end-line="87" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/observer/ObserverTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/listener/Listener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="57" column="21" lean-forward="false" selection-start-line="53" selection-start-column="12" selection-end-line="57" selection-end-column="21" />
-          <folding />
+          <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://E:/Maven/repository/org/springframework/spring-aop/5.1.6.RELEASE/spring-aop-5.1.6.RELEASE.jar!/org/springframework/aop/aspectj/AbstractAspectJAdvice.class">
+    <entry file="file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/listener/ApplicationEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8096">
-          <caret line="425" column="0" lean-forward="false" selection-start-line="425" selection-start-column="0" selection-end-line="425" selection-end-column="0" />
+        <state relative-caret-position="374">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://E:/Maven/repository/org/springframework/boot/spring-boot/2.1.4.RELEASE/spring-boot-2.1.4.RELEASE.jar!/org/springframework/boot/web/embedded/tomcat/TomcatWebServer.class">
+    <entry file="file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/listener/ListenerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2574">
-          <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+        <state relative-caret-position="242">
+          <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://E:/Maven/repository/org/springframework/spring-jdbc/5.1.6.RELEASE/spring-jdbc-5.1.6.RELEASE.jar!/org/springframework/jdbc/datasource/lookup/AbstractRoutingDataSource.class">
+    <entry file="file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/listener/TestListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="33" column="16" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+        <state relative-caret-position="264">
+          <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/DynamicRouteDataSource.java">
+    <entry file="file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/observer/ObserverClient1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="242">
+          <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/DataSourceSelector.java">
+    <entry file="file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/observer/ObservableEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="65" lean-forward="false" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
-          <folding />
+        <state relative-caret-position="286">
+          <caret line="16" column="23" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/db/dao/CustomerMapper.java">
+    <entry file="file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/listener/TestApplicationEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/config/DynamicDataSourceConfiguration.java">
+    <entry file="jar://D:/tools/jdk1.8.0_121/src.zip!/java/util/concurrent/CyclicBarrier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="-128">
+          <caret line="222" column="29" lean-forward="false" selection-start-line="222" selection-start-column="20" selection-end-line="222" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/ChameleonStart.java">
+    <entry file="jar://D:/tools/jdk1.8.0_121/src.zip!/java/util/concurrent/Exchanger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#523#524#0" expanded="false" />
-            <element signature="e#582#583#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="124">
+          <caret line="522" column="11" lean-forward="false" selection-start-line="522" selection-start-column="11" selection-end-line="522" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/config/DynamicMybatisConfig.java">
+    <entry file="jar://D:/tools/jdk1.8.0_121/src.zip!/java/util/spi/ResourceBundleControlProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="-68">
+          <caret line="50" column="17" lean-forward="false" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/config/MybatisConfig.java">
+    <entry file="jar://D:/tools/jdk1.8.0_121/src.zip!/java/util/spi/LocaleServiceProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#483#484#0" expanded="false" />
-            <element signature="e#537#538#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="1450">
+          <caret line="141" column="22" lean-forward="false" selection-start-line="141" selection-start-column="22" selection-end-line="141" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://E:/Maven/repository/org/springframework/boot/spring-boot-autoconfigure/2.1.4.RELEASE/spring-boot-autoconfigure-2.1.4.RELEASE.jar!/org/springframework/boot/autoconfigure/jdbc/DataSourceProperties.class">
+    <entry file="jar://D:/tools/jdk1.8.0_121/src.zip!/java/util/Timer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2134">
-          <caret line="146" column="16" lean-forward="false" selection-start-line="146" selection-start-column="16" selection-end-line="146" selection-end-column="16" />
-          <folding>
-            <element signature="e#5002#5003#0" expanded="true" />
-            <element signature="e#5032#5033#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="124">
+          <caret line="568" column="6" lean-forward="false" selection-start-line="568" selection-start-column="6" selection-end-line="568" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/config/ApplicationConfig.java">
+    <entry file="jar://D:/tools/jdk1.8.0_121/src.zip!/java/lang/ref/WeakReference.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="9" column="45" lean-forward="false" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-          <folding />
+        <state relative-caret-position="183">
+          <caret line="68" column="8" lean-forward="true" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/Maven/repository/org/springframework/boot/spring-boot-starter/2.1.4.RELEASE/spring-boot-starter-2.1.4.RELEASE.pom">
+    <entry file="jar://D:/tools/jdk1.8.0_121/src.zip!/java/lang/ref/Reference.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-308">
-          <caret line="58" column="38" lean-forward="true" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
+        <state relative-caret-position="124">
+          <caret line="252" column="13" lean-forward="false" selection-start-line="252" selection-start-column="13" selection-end-line="252" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/Maven/repository/org/springframework/boot/spring-boot-starter-jdbc/2.1.4.RELEASE/spring-boot-starter-jdbc-2.1.4.RELEASE.pom">
+    <entry file="jar://D:/tools/jdk1.8.0_121/src.zip!/java/util/WeakHashMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="52" column="30" lean-forward="true" selection-start-line="50" selection-start-column="6" selection-end-line="52" selection-end-column="30" />
+        <state relative-caret-position="-2750">
+          <caret line="135" column="13" lean-forward="false" selection-start-line="135" selection-start-column="13" selection-end-line="135" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/db/dao/AuthoryMapper.java">
+    <entry file="jar://D:/tools/jdk1.8.0_121/src.zip!/java/util/StringTokenizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-12">
+          <caret line="102" column="6" lean-forward="false" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/db/pojo/Authory.java">
+    <entry file="jar://D:/tools/jdk1.8.0_121/src.zip!/java/util/StringJoiner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="3542">
+          <caret line="186" column="5" lean-forward="true" selection-start-line="186" selection-start-column="5" selection-end-line="186" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chameleon/src/main/resources/generatorConfig.xml">
+    <entry file="jar://D:/tools/jdk1.8.0_121/src.zip!/java/util/spi/LocaleNameProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="43" column="33" lean-forward="false" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="146">
+          <caret line="120" column="27" lean-forward="false" selection-start-line="120" selection-start-column="27" selection-end-line="120" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/service/AuthoryService.java">
+    <entry file="jar://D:/tools/jdk1.8.0_121/src.zip!/java/util/concurrent/SynchronousQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="17" column="45" lean-forward="false" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#468#469#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="990">
+          <caret line="83" column="13" lean-forward="false" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/DynmicDataSourceAop.java">
+    <entry file="jar://D:/tools/jdk1.8.0_121/src.zip!/java/util/concurrent/Executors.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-137">
-          <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-          <folding>
-            <element signature="e#1074#1075#0" expanded="false" />
-            <element signature="e#1127#1128#0" expanded="false" />
-            <element signature="e#1184#1185#0" expanded="false" />
-            <element signature="e#1237#1238#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="1826">
+          <caret line="124" column="26" lean-forward="false" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="jar://D:/tools/jdk1.8.0_121/src.zip!/java/util/concurrent/ForkJoinPool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-860">
-          <caret line="78" column="16" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
-          <folding />
+        <state relative-caret-position="162">
+          <caret line="3395" column="14" lean-forward="false" selection-start-line="3395" selection-start-column="8" selection-end-line="3395" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chameleon/src/main/java/org/wc/controller/TestController.java" />
-    <entry file="file://$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/service/CustomerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
-          <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chameleon/src/main/resources/application.yml">
+    <entry file="jar://D:/tools/jdk1.8.0_121/src.zip!/java/util/concurrent/Phaser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
-          <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-          <folding />
+          <caret line="525" column="11" lean-forward="false" selection-start-line="525" selection-start-column="11" selection-end-line="525" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chameleon/pom.xml">
+    <entry file="jar://D:/tools/jdk1.8.0_121/src.zip!/java/io/PrintStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="84" column="10" lean-forward="true" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
+        <state relative-caret-position="101">
+          <caret line="803" column="16" lean-forward="false" selection-start-line="803" selection-start-column="16" selection-end-line="803" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chameleon/docs/6ha.sql">
+    <entry file="jar://D:/tools/jdk1.8.0_121/src.zip!/java/util/Random.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-726">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="124">
+          <caret line="617" column="21" lean-forward="false" selection-start-line="617" selection-start-column="21" selection-end-line="617" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chameleon/src/main/java/org/wc/chameleon/annotation/Master.java">
+    <entry file="jar://D:/tools/jdk1.8.0_121/src.zip!/java/util/Arrays.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="124">
+          <caret line="166" column="23" lean-forward="false" selection-start-line="166" selection-start-column="23" selection-end-line="166" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chameleon/src/test/java/org/wc/chameleon/test/ApplicationTest.java">
+    <entry file="jar://D:/tools/jdk1.8.0_121/src.zip!/java/util/concurrent/ForkJoinTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="114">
+          <caret line="716" column="19" lean-forward="false" selection-start-line="716" selection-start-column="19" selection-end-line="716" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chameleon/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="44">
-            <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/SynchonousQueueTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="39" column="47" lean-forward="false" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/PhraserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="43" column="12" lean-forward="false" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/ForkJoinPoolTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1056">
+          <caret line="55" column="8" lean-forward="false" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1429#1430#0" expanded="false" />
+            <element signature="e#1508#1509#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/ExchangerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1474">
+          <caret line="73" column="51" lean-forward="false" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#961#962#0" expanded="false" />
+            <element signature="e#1011#1012#0" expanded="false" />
+            <element signature="e#1667#1668#0" expanded="false" />
+            <element signature="e#1717#1718#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prettydog/src/test/java/org/wc/prettydog/util/jdk/util/concurrent/CyclicBarrierTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1404,7 +1917,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>midware</last-edited>
+          <last-edited>prettydog</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
