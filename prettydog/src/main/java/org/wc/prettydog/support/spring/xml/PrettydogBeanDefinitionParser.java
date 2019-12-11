@@ -7,7 +7,7 @@ import org.springframework.beans.factory.xml.BeanDefinitionParser;
 import org.springframework.beans.factory.xml.ParserContext;
 import org.springframework.util.StringUtils;
 import org.w3c.dom.Element;
-import org.wc.prettydog.util.ExtensionLoader;
+import org.wc.prettydog.support.ExtensionLoader;
 
 /**
  * Created by WenChen on 2019/11/25.
