@@ -26,4 +26,33 @@ public class StringUtils {
     public static boolean isNotEmpty(String s){
         return !isEmpty(s);
     }
+
+    /**
+     * TODO In this way will produce so many template variables,so it will be change in later version
+     *
+     * replace placeholder with obj array
+     * @param s
+     * @param placeHolder
+     * @param obj
+     * @return
+     */
+    public static String parsePlaceHolder(String s,String placeHolder,Object... obj){
+        StringBuilder sb = new StringBuilder(64);
+        int index = -1,obLength = obj.length,scount=0,
+                holderLen = placeHolder.length();
+        String str = s;
+        while ((index=str.indexOf(placeHolder)) > -1){
+            scount++;
+            if (scount > obLength){
+                sb.append(str.substring(0,index)).append(placeHolder);
+            } else {
+                sb.append(str.substring(0,index)).append(obj[scount-1].toString());
+            }
+            str = str.substring(index+holderLen);
+        }
+        if (str.length() > 0){
+            sb.append(str);
+        }
+        return sb.toString();
+    }
 }
