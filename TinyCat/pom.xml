@@ -14,7 +14,7 @@
     <url>https://github.com/dkisser</url>
 
     <properties>
-        <netty.version>4.1.25.Final</netty.version>
+        <netty.version>4.1.42.Final</netty.version>
     </properties>
 
     <dependencies>
