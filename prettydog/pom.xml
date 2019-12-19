@@ -47,6 +47,11 @@
             <groupId>com.fasterxml</groupId>
             <artifactId>classmate</artifactId>
         </dependency>
+        <!--curator-->
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-framework</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

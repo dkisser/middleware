@@ -1,9 +1,9 @@
 package org.wc.prettydog.support;
 
 import javafx.util.Pair;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.wc.prettydog.annotation.SPI;
+import org.wc.prettydog.support.logger.Logger;
+import org.wc.prettydog.support.logger.LoggerFactory;
 import org.wc.prettydog.util.StringUtils;
 
 import java.io.BufferedReader;
