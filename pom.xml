@@ -29,6 +29,7 @@
         <maven.plugins.version>3.8.1</maven.plugins.version>
         <compile.version>1.8</compile.version>
         <curator-frmework.version>2.12.0</curator-frmework.version>
+        <curator-recipes.version>2.12.0</curator-recipes.version>
     </properties>
     <dependencies>
         <!--slf4j-->
@@ -121,6 +122,11 @@
                 <groupId>org.apache.curator</groupId>
                 <artifactId>curator-framework</artifactId>
                 <version>${curator-frmework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-recipes</artifactId>
+                <version>${curator-recipes.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
