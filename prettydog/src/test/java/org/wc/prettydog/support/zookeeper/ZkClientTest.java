@@ -135,8 +135,10 @@ public class ZkClientTest {
                     }
                 }
             });
+
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
 }

@@ -13,6 +13,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.Enumeration;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.ReentrantLock;
@@ -297,5 +298,9 @@ public class ExtensionLoader<T> {
         }
 
         return t;
+    }
+
+    public Map<String,T> getExtensionAllClasses(){
+        return singletone;
     }
 }
