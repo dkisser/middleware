@@ -22,10 +22,11 @@ public class ConfigurationTools {
     }
 
     private static void loadProperties(){
-        InputStream in = ConfigurationTools.class.getClassLoader().getResourceAsStream("TinyCat.properties");
+        InputStream in = null;
         try {
+            in = ConfigurationTools.class.getClassLoader().getResourceAsStream("TinyCat.properties");
             properties.load(in);
-        } catch (IOException e) {
+        } catch (Exception e) {
             logger.error("load server properties error");
         } finally {
             if (in!=null){
@@ -38,18 +39,20 @@ public class ConfigurationTools {
     }
 
     public static String getString(String key,String defaultVal){
-        String value = System.getProperty(key);
-        if (!StringUtils.hasText(value)){
-            value = properties.getProperty(key);
-        }
+        String value = getProperty(key);
         return StringUtils.hasText(value) ? value:defaultVal;
     }
 
     public static int getInt (String key,int defaultVal){
-        String valueStr = System.getProperty(key);
-        if (!StringUtils.hasText(valueStr)){
-            valueStr = properties.getProperty(key);
-        }
+        String valueStr = getProperty(key);
         return StringUtils.hasText(valueStr) ? Integer.parseInt(valueStr):defaultVal;
+    }
+
+    private static String getProperty (String key){
+        String value = System.getProperty(key);
+        if (!StringUtils.hasText(value)){
+            value = properties!=null?properties.getProperty(key):null;
+        }
+        return value;
     }
 }

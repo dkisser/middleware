@@ -5,6 +5,7 @@ import org.wc.webserver.support.ServerModule;
 import org.wc.webserver.support.resoruce.Resource;
 
 import java.io.File;
+import java.util.List;
 
 /**
  * Created by WenChen on 2019/12/27.
@@ -12,8 +13,8 @@ import java.io.File;
 @SPI("dom")
 public interface XmlParser {
 
-    ServerModule parseResource (Resource resource);
+    List<ServerModule> parseResource (Resource resource);
 
-    ServerModule parseFile(File file);
+    List<ServerModule> parseFile(File file);
 
 }
