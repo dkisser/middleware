@@ -1,5 +1,7 @@
 package org.wc.webserver.support.resoruce;
 
+import org.wc.webserver.utils.ReflectUtils;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -24,11 +26,7 @@ public class ClassPathResource implements Resource{
     public ClassPathResource(String path, ClassLoader classLoader) {
         this.path = path;
         if (classLoader == null){
-            ClassLoader loader = Thread.currentThread().getContextClassLoader();
-            if (loader == null){
-                loader = ClassLoader.getSystemClassLoader();
-            }
-            this.classLoader = loader;
+            this.classLoader = ReflectUtils.getDefaultClassLoader();
         } else {
             this.classLoader = classLoader;
         }

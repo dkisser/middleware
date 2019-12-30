@@ -27,7 +27,7 @@ public class ConfigurationTools {
             in = ConfigurationTools.class.getClassLoader().getResourceAsStream("TinyCat.properties");
             properties.load(in);
         } catch (Exception e) {
-            logger.error("load server properties error");
+            logger.warn("load server properties error,use default properies");
         } finally {
             if (in!=null){
                 try {

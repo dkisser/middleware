@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <acceptors>
-    <acceptor port="19996" consoleEncoding="UTF-8" type="http" handler="test"/>
-    <acceptor port="19997" consoleEncoding="UTF-8" type="http" handler="test"/>
+    <acceptor port="19996" consoleEncoding="UTF-8" type="http" handler="org.wc.webserver.protocol.http.DefaultHttpHandler"/>
+    <acceptor port="19997" consoleEncoding="UTF-8" type="http" handler="org.wc.webserver.protocol.http.DefaultHttpHandler"/>
 
 </acceptors>

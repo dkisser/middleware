@@ -17,7 +17,9 @@ public class DispatcherServlet extends HttpServlet {
 
     private static Map<Integer,HttpHandler> HANDLERS = new ConcurrentHashMap<>();
     private static DispatcherServlet INSTANCE;
-    private DispatcherServlet (){}
+    public DispatcherServlet (){
+        DispatcherServlet.INSTANCE = this;
+    }
 
     public static void addHandler(int port,HttpHandler handler){
         HANDLERS.put(port,handler);

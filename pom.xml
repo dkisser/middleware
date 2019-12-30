@@ -30,6 +30,8 @@
         <compile.version>1.8</compile.version>
         <curator-frmework.version>2.12.0</curator-frmework.version>
         <curator-recipes.version>2.12.0</curator-recipes.version>
+        <plugin_jetty_version>6.1.26</plugin_jetty_version>
+        <jetty_version>6.1.26</jetty_version>
     </properties>
     <dependencies>
         <!--slf4j-->
@@ -128,6 +130,11 @@
                 <artifactId>curator-recipes</artifactId>
                 <version>${curator-recipes.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty</artifactId>
+                <version>${jetty_version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>
@@ -146,6 +153,11 @@
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <version>${springboot.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.mortbay.jetty</groupId>
+                    <artifactId>maven-jetty-plugin</artifactId>
+                    <version>${plugin_jetty_version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>

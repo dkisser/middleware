@@ -1,0 +1,2 @@
+http=org.wc.webserver.protocol.http.HttpProtocol
+tcp=org.wc.webserver.protocol.tcp.TcpProtocol

@@ -259,13 +259,13 @@ public class ExtensionLoader<T> {
 
     private static <T> void checkInterfaceType(Class<T> type){
         if (type == null){
-            failThrows(type,"Can't be null");
+            failThrows(type,"can't be null");
         }
         if (!type.isInterface()){
-            failThrows(type,"Is't an Interface");
+            failThrows(type,"is't an interface");
         }
         if (!isSPIType(type)){
-            failThrows(type,"Without @SPI Annotation");
+            failThrows(type,"without @SPI annotation");
         }
     }
 

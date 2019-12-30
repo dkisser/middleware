@@ -13,8 +13,8 @@ public class ClassPathXmlReaderTest {
 
     @Test
     public void testClassPathXmlReader (){
-        ClassPathXmlReader reader = new ClassPathXmlReader();
-        List<ServerModule> module = reader.parse("server.xml");
+        ClassPathXmlReader reader = new ClassPathXmlReader("server.xml");
+        List<ServerModule> module = reader.parse();
         System.out.println(module);
     }
 

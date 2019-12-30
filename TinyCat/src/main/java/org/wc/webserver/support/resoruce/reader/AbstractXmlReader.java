@@ -13,9 +13,14 @@ import java.util.List;
  */
 public abstract class AbstractXmlReader extends AbstractReader{
 
+    public AbstractXmlReader(ResourceLoader loader) {
+        super(loader);
+    }
+
     @Override
-    public List<ServerModule> parse(ResourceLoader resourceLoader, String path) {
-        Resource resource = resourceLoader.getResource(path);
+    public List<ServerModule> parse() {
+        ResourceLoader resourceLoader = getResourceLoader();
+        Resource resource = resourceLoader.getResource();
         String parserId = ConfigurationTools.getString("tinycat.xml.parser","dom");
         XmlParser parser = ExtensionLoader.getExtensionLoader(XmlParser.class).getExtensionById(parserId);
         return parser.parseResource(resource);

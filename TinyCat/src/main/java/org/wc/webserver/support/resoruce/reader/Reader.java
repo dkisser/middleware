@@ -12,5 +12,5 @@ public interface Reader {
 
     String serverIp();
 
-    List<ServerModule> parse(ResourceLoader resourceLoader, String path);
+    List<ServerModule> parse();
 }

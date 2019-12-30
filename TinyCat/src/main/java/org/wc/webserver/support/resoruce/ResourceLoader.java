@@ -8,6 +8,8 @@ import org.wc.webserver.support.resoruce.reader.Reader;
 public interface ResourceLoader {
     String CLASSPATH_URL_PREFIX = "classpath:";
 
-    Resource getResource(String path);
+    Resource getResource();
+
+    void setResource(Resource resource);
 
 }
