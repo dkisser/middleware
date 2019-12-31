@@ -5,6 +5,7 @@ import org.apache.catalina.LifecycleException;
 import org.apache.catalina.startup.Tomcat;
 import org.wc.prettydog.support.logger.Logger;
 import org.wc.prettydog.support.logger.LoggerFactory;
+import org.wc.webserver.conf.Constants;
 import org.wc.webserver.protocol.http.AbstractHttpServer;
 import org.wc.webserver.protocol.http.HttpHandler;
 import org.wc.webserver.protocol.http.HttpServer;
@@ -35,11 +36,16 @@ public class TomcatHttpServer extends AbstractHttpServer {
         tomcat = new Tomcat();
         tomcat.setBaseDir(baseDir);
         tomcat.setPort(module.getPort());
-        tomcat.getConnector().setProperty("maxThreads",ConfigurationTools.getString("server.maxThreads","200"));
-        tomcat.getConnector().setProperty("maxConnections",ConfigurationTools.getString("server.maxConnections",
-                "20"));
+        tomcat.getConnector().setProperty("maxThreads",ConfigurationTools
+                .getString(Constants.DEFAULT_HTTP_MAX_THREADS_KEY
+                        ,Constants.DEFAULT_HTTP_MAX_THREADS_VALUE+""));
+        tomcat.getConnector().setProperty("maxConnections",ConfigurationTools
+                .getString(Constants.DEFAULT_HTTP_MAX_CONNECTIONS_KEY
+                        ,Constants.DEFULT_HTTP_MAX_CONNECTIONS_VALUE));
         tomcat.getConnector().setProperty("URIEncoding", "UTF-8");
-        tomcat.getConnector().setProperty("connectionTimeout", "60000");
+        tomcat.getConnector().setProperty("connectionTimeout", ConfigurationTools
+                .getString(Constants.DEFAULT_HTTP_TIMEOUT_KEY
+                        , Constants.DEFAULT_HTTP_TIMEOUT_VALUE+""));
         tomcat.getConnector().setProperty("maxKeepAliveRequests", "-1");
         Context context = tomcat.addContext("/",baseDir);
         Tomcat.addServlet(context,"dispatcher",new DispatcherServlet());

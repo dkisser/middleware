@@ -1,6 +1,7 @@
 package org.wc.webserver.protocol.http.server.jetty;
 
 import org.mortbay.jetty.Server;
+import org.mortbay.jetty.SessionManager;
 import org.mortbay.jetty.nio.SelectChannelConnector;
 import org.mortbay.jetty.servlet.Context;
 import org.mortbay.jetty.servlet.ServletHandler;
@@ -10,6 +11,7 @@ import org.mortbay.log.StdErrLog;
 import org.mortbay.thread.QueuedThreadPool;
 import org.wc.prettydog.support.logger.Logger;
 import org.wc.prettydog.support.logger.LoggerFactory;
+import org.wc.webserver.conf.Constants;
 import org.wc.webserver.protocol.http.AbstractHttpServer;
 import org.wc.webserver.protocol.http.HttpHandler;
 import org.wc.webserver.protocol.http.servlet.DispatcherServlet;
@@ -29,13 +31,15 @@ public class JettyHttpServer extends AbstractHttpServer {
 
     private ServerModule module;
 
+    //TODO SET maxConnections 、keepaliveTime 、connectionTimeOut
     public JettyHttpServer(ServerModule module,HttpHandler handler) {
         super(handler);
         this.module = module;
         Log.setLog(new StdErrLog());
         Log.getLog().setDebugEnabled(false);
         DispatcherServlet.addHandler(module.getPort(), handler);
-        int threads = ConfigurationTools.getInt("server.maxThreads",200);
+        int threads = ConfigurationTools.getInt(Constants.DEFAULT_HTTP_MAX_THREADS_KEY,Constants
+                .DEFAULT_HTTP_MAX_THREADS_VALUE);
         QueuedThreadPool threadPool = new QueuedThreadPool();
         threadPool.setDaemon(true);
         threadPool.setMaxThreads(threads);
@@ -56,6 +60,10 @@ public class JettyHttpServer extends AbstractHttpServer {
         // TODO Context.SESSIONS is the best option here?
         Context context = new Context(server, "/", Context.SESSIONS);
         context.setServletHandler(servletHandler);
+        SessionManager manager = context.getSessionHandler().getSessionManager();
+        manager.setMaxInactiveInterval(ConfigurationTools.getInt(Constants.DEFAULT_HTTP_TIMEOUT_KEY
+                ,Constants.DEFAULT_HTTP_TIMEOUT_VALUE));
+
         ServletManager.getInstance().addServletContext(module.getPort(), context.getServletContext());
 
         try {

@@ -3,6 +3,8 @@ package org.wc.webserver.support;
 import org.wc.prettydog.support.logger.Logger;
 import org.wc.prettydog.support.logger.LoggerFactory;
 import org.wc.prettydog.util.StringUtils;
+import org.wc.webserver.conf.Constants;
+import org.wc.webserver.support.resoruce.ClassPathResource;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,7 +17,7 @@ public class ConfigurationTools {
 
     private static Logger logger = LoggerFactory.getLogger(ConfigurationTools.class);
 
-    private static Properties properties;
+    private static Properties properties = new Properties();
 
     static {
         loadProperties();
@@ -23,16 +25,20 @@ public class ConfigurationTools {
 
     private static void loadProperties(){
         InputStream in = null;
+        String sysProps = getSysProperties(Constants.DEFAULT_PROPERTIES_KEY
+                ,Constants.DEFAULT_PROPERTIES_VALUE);
         try {
-            in = ConfigurationTools.class.getClassLoader().getResourceAsStream("TinyCat.properties");
+            ClassPathResource resource = new ClassPathResource(sysProps);
+            in = resource.getInputStream();
             properties.load(in);
         } catch (Exception e) {
-            logger.warn("load server properties error,use default properies");
+            logger.warn("load [TinyCat.properties] error,use default properies");
         } finally {
             if (in!=null){
                 try {
                     in.close();
                 } catch (IOException e) {
+                    logger.warn("close stram faild,{}",sysProps);
                 }
             }
         }
@@ -54,5 +60,10 @@ public class ConfigurationTools {
             value = properties!=null?properties.getProperty(key):null;
         }
         return value;
+    }
+
+    public static String getSysProperties (String key,String defaultVal){
+        String value = System.getProperty(key);
+        return StringUtils.hasText(value) ? value : defaultVal;
     }
 }

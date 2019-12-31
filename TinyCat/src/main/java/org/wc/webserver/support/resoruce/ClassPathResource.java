@@ -34,7 +34,7 @@ public class ClassPathResource implements Resource{
 
     @Override
     public InputStream getInputStream() throws IOException{
-        return new FileInputStream(getFile());
+        return classLoader.getResourceAsStream(path);
     }
 
     @Override

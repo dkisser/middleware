@@ -104,4 +104,14 @@ public class ReflectUtils {
         }
         return result;
     }
+
+    public static void isAssignableFrom(Class<?> clazz,Class<?> _interface){
+        if (!_interface.isInterface()){
+            throw new IllegalArgumentException();
+        }
+        if (!_interface.isAssignableFrom(clazz)){
+            throw new IllegalArgumentException(_interface.getName()+" must assingnablefrom "+clazz.getName());
+        }
+    }
+
 }
