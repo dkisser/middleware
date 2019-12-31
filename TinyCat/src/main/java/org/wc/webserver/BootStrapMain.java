@@ -54,6 +54,10 @@ public class BootStrapMain {
         for (ServerModule module:modules){
             Protocol protocol = ExtensionLoader.getExtensionLoader(Protocol.class)
                     .getExtensionById(module.getProtocolType().getValue());
+            if(protocol == null){
+                throw new UnsupportedOperationException(module.getProtocolType()
+                        .getValue()+ " protocol not support");
+            }
             protocol.export(module);
         }
     }
