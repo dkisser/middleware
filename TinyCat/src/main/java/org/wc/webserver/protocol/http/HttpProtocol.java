@@ -34,7 +34,7 @@ public class HttpProtocol extends AbstractProtocol {
 
     @Override
     public Server exportForModule(ServerModule module) {
-        String resolverName = module.getHandlerClassName();
+        String resolverName = module.getHandler().getRef();
         HttpHandler handler;
         try {
             Class<?> handlerClazz = ReflectUtils.forNameWithThreadContextClassLoader(resolverName);

@@ -3,8 +3,6 @@ package org.wc.tinycat.server;
 import org.junit.Test;
 import org.wc.webserver.BootStrapMain;
 import org.wc.webserver.conf.Constants;
-import org.wc.webserver.support.ConfigurationTools;
-import org.wc.webserver.support.resoruce.ClassPathResource;
 
 import java.io.IOException;
 import java.io.InputStream;

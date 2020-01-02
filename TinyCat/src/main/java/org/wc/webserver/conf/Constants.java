@@ -28,4 +28,6 @@ public class Constants {
     public static final String DEFAULT_HTTP_TIMEOUT_KEY = "tinycat.http.sessionTimeOut";
 
     public static final int DEFAULT_HTTP_TIMEOUT_VALUE = 60000;
+
+    public static final String DEFAULT_ENCODING = "UTF-8";
 }
