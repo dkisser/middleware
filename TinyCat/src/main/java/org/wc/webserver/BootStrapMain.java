@@ -10,6 +10,7 @@ import org.wc.webserver.support.ServerModule;
 import org.wc.webserver.support.resoruce.reader.ClassPathXmlReader;
 import org.wc.webserver.support.resoruce.reader.Reader;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -21,7 +22,7 @@ public class BootStrapMain {
 
     private static Logger logger = LoggerFactory.getLogger(BootStrapMain.class);
 
-    private static List<ServerModule> moduleList;
+    private static List<ServerModule> moduleList = new ArrayList<>();
 
     //server start flag
     private static AtomicBoolean isStart = new AtomicBoolean(false);
@@ -50,7 +51,6 @@ public class BootStrapMain {
 
     private static void startServers (Reader reader){
         List<ServerModule> modules = reader.parse();
-        moduleList = modules;
         for (ServerModule module:modules){
             Protocol protocol = ExtensionLoader.getExtensionLoader(Protocol.class)
                     .getExtensionById(module.getProtocolType().getValue());
@@ -59,6 +59,7 @@ public class BootStrapMain {
                         .getValue()+ " protocol not support");
             }
             protocol.export(module);
+            moduleList.add(module);
         }
     }
     public static void stop(){
@@ -67,7 +68,15 @@ public class BootStrapMain {
             throw new IllegalStateException("server not start,please start first");
         }
         boolean f = isStart.compareAndSet(true,false);
+        if (!f){
+            logger.error("Server already stopped");
+            return ;
+        }
         //stop server
+        //maybe stop happend when server haven't started yet
+        if (moduleList.size() == 0){
+            return ;
+        }
         for (ServerModule module:moduleList){
             Protocol protocol = ExtensionLoader.getExtensionLoader(Protocol.class)
                     .getExtensionById(module.getProtocolType().getValue());

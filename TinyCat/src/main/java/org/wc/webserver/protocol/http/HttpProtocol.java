@@ -35,16 +35,7 @@ public class HttpProtocol extends AbstractProtocol {
     @Override
     public Server exportForModule(ServerModule module) {
         String resolverName = module.getHandler().getRef();
-        HttpHandler handler;
-        try {
-            Class<?> handlerClazz = ReflectUtils.forNameWithThreadContextClassLoader(resolverName);
-            ReflectUtils.isAssignableFrom(handlerClazz,HttpHandler.class);
-            handler = (HttpHandler) handlerClazz.newInstance();
-        } catch (ClassNotFoundException e) {
-            throw new IllegalArgumentException(resolverName+" can't find");
-        } catch (IllegalAccessException|InstantiationException e) {
-            throw new IllegalArgumentException(resolverName+" can't get instance");
-        }
+        HttpHandler handler = ReflectUtils.getInstance(resolverName,HttpHandler.class);
         return binder.bind(module,handler);
     }
 

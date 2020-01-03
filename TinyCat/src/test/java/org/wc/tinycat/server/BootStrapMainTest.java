@@ -15,7 +15,8 @@ public class BootStrapMainTest {
 
     @Test
     public void bootstrapTest(){
-        System.setProperty(Constants.DEFAULT_HTTP_SERVER_KEY,"tomcat");
+//        System.setProperty(Constants.DEFAULT_HTTP_SERVER_KEY,"tomcat");
+//        System.setProperty(Constants.DEFAULT_TCP_SERVER_KEY,"jdk");
         BootStrapMain.start();
         try {
             Thread.sleep(1000L*60*1);

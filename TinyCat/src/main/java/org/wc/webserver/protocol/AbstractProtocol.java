@@ -30,7 +30,6 @@ public abstract class AbstractProtocol implements Protocol{
             throw new IllegalStateException("port not export,please check again");
         }
         server.close();
-        ;
     }
 
     public abstract Server exportForModule (ServerModule module);

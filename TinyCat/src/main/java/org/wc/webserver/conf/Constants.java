@@ -30,4 +30,10 @@ public class Constants {
     public static final int DEFAULT_HTTP_TIMEOUT_VALUE = 60000;
 
     public static final String DEFAULT_ENCODING = "UTF-8";
+
+    public static final String DEFAULT_TCP_SERVER_KEY = "tinycat.tcp.server";
+
+    public static final String DEFAULT_TCP_SERVER_VALUE = "netty";
+
+    public static final int DEFAULT_IO_THREADS = Math.min(Runtime.getRuntime().availableProcessors() + 1, 32);
 }

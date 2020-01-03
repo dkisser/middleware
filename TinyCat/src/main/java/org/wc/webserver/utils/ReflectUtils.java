@@ -1,5 +1,7 @@
 package org.wc.webserver.utils;
 
+import org.wc.webserver.protocol.tcp.TcpHandler;
+
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -40,7 +42,7 @@ public class ReflectUtils {
     }
 
     public static ClassLoader getClassLoader(Class<?> clazz){
-        ClassLoader loader = null;
+        ClassLoader loader;
         if (clazz == null){
           loader = Thread.currentThread().getContextClassLoader();
           if (loader == null){
@@ -114,4 +116,15 @@ public class ReflectUtils {
         }
     }
 
+    public static <T> T getInstance (String name,Class<?> t){
+        try {
+            Class<?> clazz = forNameWithThreadContextClassLoader(name);
+            isAssignableFrom(clazz,t);
+            return (T) clazz.newInstance();
+        } catch (ClassNotFoundException e) {
+            throw new IllegalArgumentException(name+" can't find");
+        } catch (IllegalAccessException|InstantiationException e) {
+            throw new IllegalArgumentException(name+" can't get instance");
+        }
+    }
 }
