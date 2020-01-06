@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <artifactId>TinyCat</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.1-SNAPSHOT</version>
     <parent>
         <groupId>org.wc</groupId>
         <artifactId>midware</artifactId>
@@ -26,7 +26,7 @@
             <version>${netty.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.curator/curator-recipes -->
-        <!-- zookeeper 3.4对应2.x和3.x的版本-->
+        <!-- zookeeper 3.4 mapped to 2.x or 3.x-->
         <dependency>
             <groupId>org.apache.curator</groupId>
             <artifactId>curator-framework</artifactId>

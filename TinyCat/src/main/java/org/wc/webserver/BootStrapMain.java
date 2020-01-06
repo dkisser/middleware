@@ -61,6 +61,7 @@ public class BootStrapMain {
             protocol.export(module);
             moduleList.add(module);
         }
+        logger.info("server start success");
     }
     public static void stop(){
         //check flag
@@ -82,6 +83,7 @@ public class BootStrapMain {
                     .getExtensionById(module.getProtocolType());
             protocol.unexport(module.getPort());
         }
+        logger.info("server end success");
     }
 
 }

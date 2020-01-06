@@ -41,12 +41,13 @@ public class JettyHttpServer extends AbstractHttpServer {
         Log.setLog(new StdErrLog());
         Log.getLog().setDebugEnabled(false);
         DispatcherServlet.addHandler(module.getPort(), handler);
-        int threads = ConfigurationTools.getInt(Constants.DEFAULT_HTTP_MAX_THREADS_KEY,Constants
-                .DEFAULT_HTTP_MAX_THREADS_VALUE);
+        String threads = module.getAttributes(Constants.DEFAULT_HTTP_MAX_THREADS_KEY,Constants
+                .DEFAULT_HTTP_MAX_THREADS_VALUE+"");
+        int threadNum = Integer.parseInt(threads);
         QueuedThreadPool threadPool = new QueuedThreadPool();
         threadPool.setDaemon(true);
-        threadPool.setMaxThreads(threads);
-        threadPool.setMinThreads(threads);
+        threadPool.setMaxThreads(threadNum);
+        threadPool.setMinThreads(threadNum);
 
         SelectChannelConnector connector = new SelectChannelConnector();
         connector.setHost(NetUtils.getServerIp());
@@ -65,8 +66,9 @@ public class JettyHttpServer extends AbstractHttpServer {
         setFilter(module,context,servletHandler);
         context.setServletHandler(servletHandler);
         SessionManager manager = context.getSessionHandler().getSessionManager();
-        manager.setMaxInactiveInterval(ConfigurationTools.getInt(Constants.DEFAULT_HTTP_TIMEOUT_KEY
-                ,Constants.DEFAULT_HTTP_TIMEOUT_VALUE));
+        String sessionTimeout = module.getAttributes(Constants.DEFAULT_HTTP_TIMEOUT_KEY
+                ,Constants.DEFAULT_HTTP_TIMEOUT_VALUE+"");
+        manager.setMaxInactiveInterval(Integer.parseInt(sessionTimeout));
 
         ServletManager.getInstance().addServletContext(module.getPort(), context.getServletContext());
 

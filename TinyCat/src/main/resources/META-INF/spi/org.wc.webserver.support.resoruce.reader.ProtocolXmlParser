@@ -1,0 +1,2 @@
+http=org.wc.webserver.support.resoruce.reader.HttpDomXmlParser
+tcp=org.wc.webserver.support.resoruce.reader.TcpDomXmlParser

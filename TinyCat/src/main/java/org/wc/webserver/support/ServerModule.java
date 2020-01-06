@@ -1,6 +1,8 @@
 package org.wc.webserver.support;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by WenChen on 2019/12/27.
@@ -9,15 +11,9 @@ public class ServerModule {
 
     private int port;
 
-    private String consoleEncoding;
-
     private String protocolType;
 
-    private String maxThreads;
-
-    private String maxConnections;
-
-    private String connectTimeOut;
+    private Map<String,String> attributes = new HashMap<>();
 
     private List<AcceptorFilter> filters;
 
@@ -31,44 +27,12 @@ public class ServerModule {
         this.port = port;
     }
 
-    public String getConsoleEncoding() {
-        return consoleEncoding;
-    }
-
-    public void setConsoleEncoding(String consoleEncoding) {
-        this.consoleEncoding = consoleEncoding;
-    }
-
     public String getProtocolType() {
         return protocolType;
     }
 
     public void setProtocolType(String protocolType) {
         this.protocolType = protocolType;
-    }
-
-    public String getMaxThreads() {
-        return maxThreads;
-    }
-
-    public void setMaxThreads(String maxThreads) {
-        this.maxThreads = maxThreads;
-    }
-
-    public String getMaxConnections() {
-        return maxConnections;
-    }
-
-    public void setMaxConnections(String maxConnections) {
-        this.maxConnections = maxConnections;
-    }
-
-    public String getConnectTimeOut() {
-        return connectTimeOut;
-    }
-
-    public void setConnectTimeOut(String connectTimeOut) {
-        this.connectTimeOut = connectTimeOut;
     }
 
     public List<AcceptorFilter> getFilters() {
@@ -85,6 +49,18 @@ public class ServerModule {
 
     public void setHandler(AcceptorHandler handler) {
         this.handler = handler;
+    }
+
+    public void addAttributes(String key,String value) {
+        this.attributes.put(key,value);
+    }
+
+    public String getAttributes(String key,String defaultVal){
+        String val = this.attributes.get(key);
+        if (val == null){
+            val = defaultVal;
+        }
+        return val;
     }
 
     public static class AcceptorHandler{

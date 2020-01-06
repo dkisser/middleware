@@ -17,15 +17,15 @@ public class Constants {
 
     public static final String DEFAULT_IN_SEREVER_VALUE = "server.xml";
 
-    public static final String DEFAULT_HTTP_MAX_THREADS_KEY = "tinycat.http.maxThreads";
+    public static final String DEFAULT_HTTP_MAX_THREADS_KEY = "maxThreads";
 
     public static final int DEFAULT_HTTP_MAX_THREADS_VALUE = 200;
 
-    public static final String DEFAULT_HTTP_MAX_CONNECTIONS_KEY = "tinycat.http.maxConnections";
+    public static final String DEFAULT_HTTP_MAX_CONNECTIONS_KEY = "maxConnections";
 
     public static final String DEFULT_HTTP_MAX_CONNECTIONS_VALUE = "20";
 
-    public static final String DEFAULT_HTTP_TIMEOUT_KEY = "tinycat.http.sessionTimeOut";
+    public static final String DEFAULT_HTTP_TIMEOUT_KEY = "sessionTimeOut";
 
     public static final int DEFAULT_HTTP_TIMEOUT_VALUE = 60000;
 

@@ -38,10 +38,13 @@ public class TomcatHttpServer extends AbstractHttpServer {
         tomcat = new Tomcat();
         tomcat.setBaseDir(baseDir);
         tomcat.setPort(module.getPort());
-        tomcat.getConnector().setProperty("maxThreads",module.getMaxThreads());
-        tomcat.getConnector().setProperty("maxConnections", module.getMaxConnections());
+        tomcat.getConnector().setProperty("maxThreads",module.getAttributes(Constants.DEFAULT_HTTP_MAX_THREADS_KEY,
+                Constants.DEFAULT_HTTP_MAX_THREADS_VALUE+""));
+        tomcat.getConnector().setProperty("maxConnections", module.getAttributes(Constants
+                .DEFAULT_HTTP_MAX_CONNECTIONS_KEY,Constants.DEFULT_HTTP_MAX_CONNECTIONS_VALUE));
         tomcat.getConnector().setProperty("URIEncoding", "UTF-8");
-        tomcat.getConnector().setProperty("connectionTimeout", module.getConnectTimeOut());
+        tomcat.getConnector().setProperty("connectionTimeout", module.getAttributes(Constants
+                .DEFAULT_HTTP_TIMEOUT_KEY,Constants.DEFAULT_HTTP_TIMEOUT_VALUE+""));
         tomcat.getConnector().setProperty("maxKeepAliveRequests", "-1");
         Context context = tomcat.addContext("/",baseDir);
         setFilter(module,context);
