@@ -10,6 +10,10 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.DelimiterBasedFrameDecoder;
 import io.netty.handler.codec.Delimiters;
+import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
+import io.netty.handler.codec.LineBasedFrameDecoder;
+
+import java.nio.ByteOrder;
 
 /**
  * Created by WenChen on 2020/1/2.
@@ -29,7 +33,10 @@ public class NettServerTest {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
                             socketChannel.pipeline()
-                                    .addLast("decoder",new DelimiterBasedFrameDecoder(Integer.MAX_VALUE, Delimiters.lineDelimiter()[0]))
+                                    //\r\n splite
+//                                    .addLast("decoder",new DelimiterBasedFrameDecoder(Integer.MAX_VALUE, Delimiters.lineDelimiter()[0]))
+                                    .addLast("decoder",new LengthFieldBasedFrameDecoder(Integer.MAX_VALUE,
+                                            0,4,0,4))
                                     .addLast("handler",new PringServerHandler());
                         }
                     })
@@ -46,4 +53,5 @@ public class NettServerTest {
 //            boss.shutdownGracefully();
         }
     }
+
 }

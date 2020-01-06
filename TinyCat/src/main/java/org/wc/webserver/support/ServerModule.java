@@ -1,7 +1,5 @@
 package org.wc.webserver.support;
 
-import org.wc.webserver.protocol.Protocol;
-
 import java.util.List;
 
 /**
@@ -13,7 +11,7 @@ public class ServerModule {
 
     private String consoleEncoding;
 
-    private Protocol.ProtocolType protocolType;
+    private String protocolType;
 
     private String maxThreads;
 
@@ -41,11 +39,11 @@ public class ServerModule {
         this.consoleEncoding = consoleEncoding;
     }
 
-    public Protocol.ProtocolType getProtocolType() {
+    public String getProtocolType() {
         return protocolType;
     }
 
-    public void setProtocolType(Protocol.ProtocolType protocolType) {
+    public void setProtocolType(String protocolType) {
         this.protocolType = protocolType;
     }
 

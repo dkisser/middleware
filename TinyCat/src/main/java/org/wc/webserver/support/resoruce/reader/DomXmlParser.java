@@ -2,11 +2,9 @@ package org.wc.webserver.support.resoruce.reader;
 
 import org.w3c.dom.*;
 import org.wc.webserver.conf.Constants;
-import org.wc.webserver.protocol.Protocol;
 import org.wc.webserver.support.ServerModule;
 import org.wc.webserver.support.resoruce.Resource;
 
-import javax.print.attribute.standard.MediaSize;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
@@ -66,7 +64,7 @@ public class DomXmlParser implements XmlParser {
             String port = map.getNamedItem("port").getNodeValue();
             String protocolType = map.getNamedItem("type").getNodeValue();
             module.setPort(Integer.parseInt(port));
-            module.setProtocolType(Protocol.ProtocolType.typeOf(protocolType));
+            module.setProtocolType(protocolType);
             setAcceptorProperty(map,module);
             if (!node.hasChildNodes())
                 throw new IllegalArgumentException("acceptor must contains child node");

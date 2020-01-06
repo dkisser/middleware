@@ -7,6 +7,8 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.DelimiterBasedFrameDecoder;
 import io.netty.handler.codec.Delimiters;
+import io.netty.handler.codec.bytes.ByteArrayDecoder;
+import io.netty.handler.codec.bytes.ByteArrayEncoder;
 import io.netty.handler.codec.string.StringEncoder;
 import io.netty.util.AttributeKey;
 import jdk.management.resource.ResourceType;
@@ -28,9 +30,10 @@ public class NettyClientTest {
                     @Override
                     protected void initChannel(NioSocketChannel socketChannel) throws Exception {
                         socketChannel.pipeline()
-                                .addLast("stringEncoder",new StringEncoder())
-                                .addLast("decoder",new DelimiterBasedFrameDecoder(Integer.MAX_VALUE, Delimiters.lineDelimiter()[0]))
-                                .addLast("handler",new ClientHandlerTest());;
+//                                .addLast("stringEncoder",new StringEncoder())
+                                .addLast(new ByteArrayEncoder())
+//                                .addLast("decoder",new DelimiterBasedFrameDecoder(Integer.MAX_VALUE, Delimiters.lineDelimiter()[0]))
+                                .addLast("handler",new ClientHandlerTest());
                     }
                 });
             bootstrap.connect("localhost",19997)

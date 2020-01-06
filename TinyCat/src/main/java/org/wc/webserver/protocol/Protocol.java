@@ -15,30 +15,6 @@ public interface Protocol {
 
     void export(ServerModule module);
 
-
     void unexport(int port);
 
-    enum ProtocolType{
-        HTTP("http"),TCP("tcp");
-
-        private ProtocolType(String value) {
-            this.value = value;
-        }
-
-        private String value;
-
-        public static ProtocolType typeOf (String s){
-            ProtocolType[] types = values();
-            for (ProtocolType type:types){
-                if (type.value.equals(s)){
-                    return type;
-                }
-            }
-            return null;
-        }
-
-        public String getValue(){
-            return value;
-        }
-    }
 }

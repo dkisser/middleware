@@ -53,10 +53,10 @@ public class BootStrapMain {
         List<ServerModule> modules = reader.parse();
         for (ServerModule module:modules){
             Protocol protocol = ExtensionLoader.getExtensionLoader(Protocol.class)
-                    .getExtensionById(module.getProtocolType().getValue());
+                    .getExtensionById(module.getProtocolType());
             if(protocol == null){
                 throw new UnsupportedOperationException(module.getProtocolType()
-                        .getValue()+ " protocol not support");
+                        + " protocol not support");
             }
             protocol.export(module);
             moduleList.add(module);
@@ -79,7 +79,7 @@ public class BootStrapMain {
         }
         for (ServerModule module:moduleList){
             Protocol protocol = ExtensionLoader.getExtensionLoader(Protocol.class)
-                    .getExtensionById(module.getProtocolType().getValue());
+                    .getExtensionById(module.getProtocolType());
             protocol.unexport(module.getPort());
         }
     }
