@@ -67,8 +67,8 @@ public class ExtensionLoader<T> {
         checkInterfaceType(clazz);
         ExtensionLoader extensionLoader = extensionLoaders.get(clazz);
         if (extensionLoader == null){
-            extensionLoader = new ExtensionLoader(clazz);
-            extensionLoaders.putIfAbsent(clazz,extensionLoader);
+            extensionLoaders.putIfAbsent(clazz,new ExtensionLoader(clazz));
+            extensionLoader = extensionLoaders.get(clazz);
         }
         return extensionLoader;
     }
@@ -251,8 +251,8 @@ public class ExtensionLoader<T> {
         T instance = singletone.get(id);
         if (instance == null){
             Class<?> clazz = extensionClass.get(id);
-            instance = (T) clazz.newInstance();
-            singletone.putIfAbsent(id,instance);
+            singletone.putIfAbsent(id,(T) clazz.newInstance());
+            instance = singletone.get(id);
         }
         return instance;
     }
