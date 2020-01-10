@@ -51,14 +51,22 @@ public class ServerModule {
         this.handler = handler;
     }
 
-    public void addAttributes(String key,String value) {
+    public void addAttribute(String key,String value) {
         this.attributes.put(key,value);
     }
 
-    public String getAttributes(String key,String defaultVal){
+    public String getAttribute(String key,String defaultVal){
         String val = this.attributes.get(key);
         if (val == null){
             val = defaultVal;
+        }
+        return val;
+    }
+
+    public String getAttribute(String key){
+        String val = this.attributes.get(key);
+        if (val == null){
+            throw new NullPointerException("no attribute ["+key+"]");
         }
         return val;
     }

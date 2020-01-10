@@ -41,7 +41,7 @@ public class JettyHttpServer extends AbstractHttpServer {
         Log.setLog(new StdErrLog());
         Log.getLog().setDebugEnabled(false);
         DispatcherServlet.addHandler(module.getPort(), handler);
-        String threads = module.getAttributes(Constants.DEFAULT_HTTP_MAX_THREADS_KEY,Constants
+        String threads = module.getAttribute(Constants.DEFAULT_HTTP_MAX_THREADS_KEY,Constants
                 .DEFAULT_HTTP_MAX_THREADS_VALUE+"");
         int threadNum = Integer.parseInt(threads);
         QueuedThreadPool threadPool = new QueuedThreadPool();
@@ -66,7 +66,7 @@ public class JettyHttpServer extends AbstractHttpServer {
         setFilter(module,context,servletHandler);
         context.setServletHandler(servletHandler);
         SessionManager manager = context.getSessionHandler().getSessionManager();
-        String sessionTimeout = module.getAttributes(Constants.DEFAULT_HTTP_TIMEOUT_KEY
+        String sessionTimeout = module.getAttribute(Constants.DEFAULT_HTTP_TIMEOUT_KEY
                 ,Constants.DEFAULT_HTTP_TIMEOUT_VALUE+"");
         manager.setMaxInactiveInterval(Integer.parseInt(sessionTimeout));
 

@@ -36,4 +36,28 @@ public class Constants {
     public static final String DEFAULT_TCP_SERVER_VALUE = "netty";
 
     public static final int DEFAULT_IO_THREADS = Math.min(Runtime.getRuntime().availableProcessors() + 1, 32);
+
+    public static final String LENGBASED_DECODER_VALUE = "lengbased";
+
+    public static final String DELIMITER_DECODER_VALUE = "delimiter";
+
+    public static final String TCP_LENGTHFIELDOFFSET_KEY = "lengthFieldOffset";
+
+    public static final String TCP_LENGTHFIELDOFFSET_VALUE = "0";
+
+    public static final String TCP_LENGTHFIELDLENGTH_KEY = "lengthFieldLength";
+
+    public static final String TCP_LENGTHFIELDLENGTH_VALUE = "4";
+
+    public static final String TCP_LENGTHADJUSTMENT_KEY = "lengthAdjustment";
+
+    public static final String TCP_LENGTHADJUSTMENT_VALUE = "0";
+
+    public static final String TCP_INITBYTESTOSKIP_KEY = "initBytesToskip";
+
+    public static final String TCP_INITBYTESTOSKIP_VALUE = "0";
+
+    public static final String TCP_MAXFRAMELENGTH_KEY = "maxFrameLength";
+
+    public static final String TCP_MAXFRAMELENGTH_VALUE = "maxFrameLength";
 }

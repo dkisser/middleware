@@ -13,7 +13,7 @@ public class DomParseUtil {
         NamedNodeMap map = node.getAttributes();
         for (int i=0,length=map.getLength();i<length;i++){
             Node n = map.item(i);
-            module.addAttributes(n.getNodeName(),n.getNodeValue());
+            module.addAttribute(n.getNodeName(),n.getNodeValue());
         }
     }
 
