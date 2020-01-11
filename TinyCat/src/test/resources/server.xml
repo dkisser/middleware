@@ -10,7 +10,7 @@
     </acceptor>-->
 
     <acceptor port="19997" type="tcp">
-        <attribute consoleEncoding="UTF-8" maxThreads="200" decoder="default" type="delimiter"/>
+        <attribute consoleEncoding="UTF-8" maxThreads="200" type="lengbased"/>
         <handler ref="org.wc.tinycat.server.DefaultTcpHandler"/>
     </acceptor>
 </acceptors>

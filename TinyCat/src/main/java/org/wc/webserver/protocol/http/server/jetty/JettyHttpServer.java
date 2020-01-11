@@ -50,7 +50,6 @@ public class JettyHttpServer extends AbstractHttpServer {
         threadPool.setMinThreads(threadNum);
 
         SelectChannelConnector connector = new SelectChannelConnector();
-        connector.setHost(NetUtils.getServerIp());
         connector.setPort(module.getPort());
 
         server = new Server();
@@ -96,6 +95,7 @@ public class JettyHttpServer extends AbstractHttpServer {
     private void setFilter(ServerModule module,Context context,ServletHandler servletHandler){
         List<ServerModule.AcceptorFilter> filters = module.getFilters();
         for (ServerModule.AcceptorFilter filter:filters){
+            checkFilter(filter);
             FilterHolder f = servletHandler.addFilterWithMapping(filter.getRef(),filter.getUrlPattern(), Context.REQUEST);
             context.addFilter(f,"/*",Context.REQUEST);
         }

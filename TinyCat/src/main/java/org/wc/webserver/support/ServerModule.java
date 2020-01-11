@@ -1,5 +1,6 @@
 package org.wc.webserver.support;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +16,7 @@ public class ServerModule {
 
     private Map<String,String> attributes = new HashMap<>();
 
-    private List<AcceptorFilter> filters;
+    private List<AcceptorFilter> filters = new ArrayList<>();
 
     private AcceptorHandler handler;
 

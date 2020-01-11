@@ -65,6 +65,10 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${springboot.version}</version>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
             <!--mybatis-generator-->
             <plugin>
                 <groupId>org.mybatis.generator</groupId>

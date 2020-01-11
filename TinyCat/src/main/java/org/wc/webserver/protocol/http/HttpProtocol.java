@@ -8,12 +8,6 @@ import org.wc.webserver.support.ConfigurationTools;
 import org.wc.webserver.support.ServerModule;
 import org.wc.webserver.utils.ReflectUtils;
 
-import javax.servlet.ServletInputStream;
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-
 /**
  * Created by WenChen on 2019/12/30.
  */

@@ -54,6 +54,8 @@ public class ClassPathResource implements Resource{
             uri = getURL().toURI();
         } catch (URISyntaxException e) {
             throw new IOException(e);
+        } catch (NullPointerException ne) {
+            throw new IllegalStateException("server file not found");
         }
         return uri;
     }

@@ -59,5 +59,5 @@ public class Constants {
 
     public static final String TCP_MAXFRAMELENGTH_KEY = "maxFrameLength";
 
-    public static final String TCP_MAXFRAMELENGTH_VALUE = "maxFrameLength";
+    public static final String TCP_MAXFRAMELENGTH_VALUE = "1024";
 }

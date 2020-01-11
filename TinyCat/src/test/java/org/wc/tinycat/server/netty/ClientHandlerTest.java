@@ -27,14 +27,14 @@ public class ClientHandlerTest extends ChannelDuplexHandler {
             System.out.println(value);
         }
         //把客户端的通道关闭
-        ctx.channel().close();
+//        ctx.channel().close();
     }
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         super.channelActive(ctx);
         System.out.println("client connect");
-        String str = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+        String str = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
         int length = str.length();
         byte[] lengthArr = ByteUtils.Int2Byte_BE(length);
         byte[] arr = str.getBytes();

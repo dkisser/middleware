@@ -74,6 +74,7 @@ public class TomcatHttpServer extends AbstractHttpServer {
     private void setFilter (ServerModule module,Context context){
         List<ServerModule.AcceptorFilter> filters = module.getFilters();
         for (ServerModule.AcceptorFilter filter:filters){
+            checkFilter(filter);
             FilterDef filterDef = new FilterDef();
             filterDef.setFilterName(filter.getName());
             filterDef.setFilterClass(filter.getRef());
