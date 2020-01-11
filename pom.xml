@@ -147,6 +147,8 @@
                     <configuration>
                         <source>${compile.version}</source>
                         <target>${compile.version}</target>
+                        <encoding>UTF-8</encoding>
+                        <skip>true</skip>
                     </configuration>
                 </plugin>
                 <plugin>
