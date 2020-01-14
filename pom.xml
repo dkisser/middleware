@@ -32,6 +32,7 @@
         <curator-recipes.version>2.12.0</curator-recipes.version>
         <plugin_jetty_version>6.1.26</plugin_jetty_version>
         <jetty_version>6.1.26</jetty_version>
+        <tomcat_embed_version>8.5.31</tomcat_embed_version>
     </properties>
     <dependencies>
         <!--slf4j-->
@@ -130,10 +131,17 @@
                 <artifactId>curator-recipes</artifactId>
                 <version>${curator-recipes.version}</version>
             </dependency>
+            <!--jetty-->
             <dependency>
                 <groupId>org.mortbay.jetty</groupId>
                 <artifactId>jetty</artifactId>
                 <version>${jetty_version}</version>
+            </dependency>
+            <!--tomcat-->
+            <dependency>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-core</artifactId>
+                <version>${tomcat_embed_version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

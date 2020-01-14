@@ -48,7 +48,7 @@ public class NettyTcpServer extends AbstractTcpServer {
             .channel(NioServerSocketChannel.class)
             .option(ChannelOption.SO_BACKLOG,128)
             .option(ChannelOption.SO_RCVBUF,4*1024)
-            .option(ChannelOption.SO_SNDBUF,4*1024)
+//            .option(ChannelOption.SO_SNDBUF,4*1024)
             .childOption(ChannelOption.SO_KEEPALIVE,true)
             .childHandler(new ChannelInitializer<NioSocketChannel>() {
                 @Override

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <acceptors>
-    <!--<acceptor port="19996" type="http">
+    <acceptor port="19996" type="http">
         <filters>
             <filter name="testFilter" url-pattern="/test/*" ref="org.wc.tinycat.protocol.HttpFilterTest"/>
             <filter name="testFilter" url-pattern="/test/*" ref="org.wc.tinycat.protocol.HttpFilterTest"/>
         </filters>
         <attribute consoleEncoding="UTF-8" maxThreads="200" test1="111"/>
         <handler ref="org.wc.webserver.protocol.http.DefaultHttpHandler"/>
-    </acceptor>-->
+    </acceptor>
 
     <acceptor port="19997" type="tcp">
         <attribute consoleEncoding="UTF-8" maxThreads="200" type="lengbased"/>
