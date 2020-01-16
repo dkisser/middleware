@@ -10,6 +10,10 @@
     </acceptor>
 
     <acceptor port="19997" type="tcp">
+        <filters>
+            <filter name="testFilter" url-pattern="/test/*" ref="org.wc.tinycat.protocol.TcpFilterTest"/>
+            <filter name="testFilter" url-pattern="/test/*" ref="org.wc.tinycat.protocol.TcpPingFilter"/>
+        </filters>
         <attribute consoleEncoding="UTF-8" maxThreads="200" type="lengbased"/>
         <handler ref="org.wc.tinycat.server.DefaultTcpHandler"/>
     </acceptor>

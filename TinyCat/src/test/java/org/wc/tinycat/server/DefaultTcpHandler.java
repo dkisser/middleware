@@ -9,6 +9,7 @@ public class DefaultTcpHandler implements TcpHandler{
 
     @Override
     public byte[] handler(byte[] request) {
+        System.out.println("a");
         return request;
     }
 }

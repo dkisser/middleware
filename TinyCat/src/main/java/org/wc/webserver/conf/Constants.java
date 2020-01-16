@@ -57,7 +57,7 @@ public class Constants {
 
     public static final String TCP_INITBYTESTOSKIP_KEY = "initBytesToskip";
 
-    public static final String TCP_INITBYTESTOSKIP_VALUE = "0";
+    public static final String TCP_INITBYTESTOSKIP_VALUE = "4";
 
     public static final String TCP_MAXFRAMELENGTH_KEY = "maxFrameLength";
 

@@ -25,6 +25,7 @@ public class TcpProtocol extends AbstractProtocol {
     public Server exportForModule(ServerModel module) {
         String resolverName = module.getHandler().getRef();
         TcpHandler handler = ReflectUtils.getInstance(resolverName,TcpHandler.class);
-        return binder.bind(module,handler);
+        TcpHandler wrapper = TcpFilterWrapper.buildFilterChain(handler,module);
+        return binder.bind(module,wrapper);
     }
 }
