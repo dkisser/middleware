@@ -1,0 +1,2 @@
+jdk=org.wc.webserver.protocol.tcp.jdk.JdkTcpBinder
+netty=org.wc.webserver.protocol.tcp.netty.NettyTcpBinder

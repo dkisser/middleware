@@ -1,9 +1,9 @@
 package org.wc.prettydog.support;
 
 import javafx.util.Pair;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.wc.prettydog.annotation.SPI;
+import org.wc.prettydog.support.logger.Logger;
+import org.wc.prettydog.support.logger.LoggerFactory;
 import org.wc.prettydog.util.StringUtils;
 
 import java.io.BufferedReader;
@@ -13,6 +13,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.Enumeration;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.ReentrantLock;
@@ -66,8 +67,8 @@ public class ExtensionLoader<T> {
         checkInterfaceType(clazz);
         ExtensionLoader extensionLoader = extensionLoaders.get(clazz);
         if (extensionLoader == null){
-            extensionLoader = new ExtensionLoader(clazz);
-            extensionLoaders.putIfAbsent(clazz,extensionLoader);
+            extensionLoaders.putIfAbsent(clazz,new ExtensionLoader(clazz));
+            extensionLoader = extensionLoaders.get(clazz);
         }
         return extensionLoader;
     }
@@ -250,21 +251,21 @@ public class ExtensionLoader<T> {
         T instance = singletone.get(id);
         if (instance == null){
             Class<?> clazz = extensionClass.get(id);
-            instance = (T) clazz.newInstance();
-            singletone.putIfAbsent(id,instance);
+            singletone.putIfAbsent(id,(T) clazz.newInstance());
+            instance = singletone.get(id);
         }
         return instance;
     }
 
     private static <T> void checkInterfaceType(Class<T> type){
         if (type == null){
-            failThrows(type,"Can't be null");
+            failThrows(type,"can't be null");
         }
         if (!type.isInterface()){
-            failThrows(type,"Is't an Interface");
+            failThrows(type,"is't an interface");
         }
         if (!isSPIType(type)){
-            failThrows(type,"Without @SPI Annotation");
+            failThrows(type,"without @SPI annotation");
         }
     }
 
@@ -297,5 +298,9 @@ public class ExtensionLoader<T> {
         }
 
         return t;
+    }
+
+    public Map<String,T> getExtensionAllClasses(){
+        return singletone;
     }
 }
