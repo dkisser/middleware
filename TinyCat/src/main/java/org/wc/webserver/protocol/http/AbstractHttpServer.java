@@ -1,9 +1,7 @@
 package org.wc.webserver.protocol.http;
 
-import org.wc.webserver.support.ServerModule;
+import org.wc.webserver.support.ServerModel;
 import org.wc.webserver.utils.ReflectUtils;
-
-import java.util.List;
 
 /**
  * Created by WenChen on 2019/12/30.
@@ -36,7 +34,7 @@ public abstract class AbstractHttpServer implements HttpServer{
         return httpHandler;
     }
 
-    protected void checkFilter (ServerModule.AcceptorFilter filter){
+    protected void checkFilter (ServerModel.AcceptorFilter filter){
         if (filter != null){
             try {
                 ReflectUtils.forNameWithThreadContextClassLoader(filter.getRef());

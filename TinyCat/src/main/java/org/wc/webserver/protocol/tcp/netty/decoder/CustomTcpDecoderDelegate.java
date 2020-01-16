@@ -4,7 +4,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
 import org.wc.prettydog.support.ExtensionLoader;
-import org.wc.webserver.support.ServerModule;
+import org.wc.webserver.support.ServerModel;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ public class CustomTcpDecoderDelegate extends ByteToMessageDecoder{
 
     private CustomTcpDecoder decoder;
 
-    public CustomTcpDecoderDelegate(ServerModule module) {
+    public CustomTcpDecoderDelegate(ServerModel module) {
         this.decoder = ExtensionLoader.getExtensionLoader(CustomTcpDecoder.class)
                 .getExtensionById(module.getAttribute("decoder"));
     }

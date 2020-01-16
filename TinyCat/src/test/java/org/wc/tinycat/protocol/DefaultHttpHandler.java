@@ -1,6 +1,7 @@
 package org.wc.tinycat.protocol;
 
 import org.wc.webserver.protocol.http.HttpHandler;
+import org.wc.webserver.support.RequestResponseModel;
 
 import javax.servlet.ServletInputStream;
 import javax.servlet.ServletOutputStream;
@@ -35,5 +36,10 @@ public class DefaultHttpHandler implements HttpHandler {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void handler(RequestResponseModel model) {
+
     }
 }

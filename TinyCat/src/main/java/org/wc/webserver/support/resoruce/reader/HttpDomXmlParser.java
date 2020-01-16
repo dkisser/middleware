@@ -3,7 +3,7 @@ package org.wc.webserver.support.resoruce.reader;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.wc.webserver.support.ServerModule;
+import org.wc.webserver.support.ServerModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,8 +14,8 @@ import java.util.List;
 public class HttpDomXmlParser implements ProtocolXmlParser {
 
     @Override
-    public ServerModule parseByProtocol(Node node) {
-        ServerModule module = new ServerModule();
+    public ServerModel parseByProtocol(Node node) {
+        ServerModel module = new ServerModel();
         NodeList childList = node.getChildNodes();
         for (int i=0,length=childList.getLength();i<length;i++){
             Node child = childList.item(i);
@@ -32,9 +32,9 @@ public class HttpDomXmlParser implements ProtocolXmlParser {
         return module;
     }
 
-    private void parseFilters(ServerModule module,Node node){
+    private void parseFilters(ServerModel module, Node node){
         NodeList filters = node.getChildNodes();
-        List<ServerModule.AcceptorFilter> filterList = new ArrayList<>();
+        List<ServerModel.AcceptorFilter> filterList = new ArrayList<>();
         for (int i=0,length=filters.getLength();i<length;i++){
             Node filter = filters.item(i);
             if ("filter".equals(filter.getNodeName())){
@@ -42,7 +42,7 @@ public class HttpDomXmlParser implements ProtocolXmlParser {
                 String ref = map.getNamedItem("ref").getNodeValue();
                 String urlPattern = map.getNamedItem("url-pattern").getNodeValue();
                 String name = map.getNamedItem("name").getNodeValue();
-                ServerModule.AcceptorFilter f = new ServerModule.AcceptorFilter();
+                ServerModel.AcceptorFilter f = new ServerModel.AcceptorFilter();
                 f.setName(name);
                 f.setRef(ref);
                 f.setUrlPattern(urlPattern);

@@ -2,7 +2,7 @@ package org.wc.webserver.support.resoruce.reader;
 
 import org.w3c.dom.Node;
 import org.wc.prettydog.annotation.SPI;
-import org.wc.webserver.support.ServerModule;
+import org.wc.webserver.support.ServerModel;
 
 /**
  * Created by WenChen on 2020/1/6.
@@ -10,5 +10,5 @@ import org.wc.webserver.support.ServerModule;
 @SPI
 public interface ProtocolXmlParser {
 
-    ServerModule parseByProtocol(Node node);
+    ServerModel parseByProtocol(Node node);
 }

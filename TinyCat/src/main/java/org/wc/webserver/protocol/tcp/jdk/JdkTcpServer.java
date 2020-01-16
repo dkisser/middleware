@@ -4,8 +4,7 @@ import org.wc.prettydog.support.logger.Logger;
 import org.wc.prettydog.support.logger.LoggerFactory;
 import org.wc.webserver.protocol.tcp.AbstractTcpServer;
 import org.wc.webserver.protocol.tcp.TcpHandler;
-import org.wc.webserver.protocol.tcp.TcpServer;
-import org.wc.webserver.support.ServerModule;
+import org.wc.webserver.support.ServerModel;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -13,7 +12,6 @@ import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Arrays;
-import java.util.concurrent.*;
 
 /**
  * Created by WenChen on 2020/1/2.
@@ -24,7 +22,7 @@ public class JdkTcpServer extends AbstractTcpServer{
 
     private ServerSocket server;
 
-    public JdkTcpServer(ServerModule module,TcpHandler handler) {
+    public JdkTcpServer(ServerModel module, TcpHandler handler) {
         super(handler);
         try {
             server = new ServerSocket(module.getPort());

@@ -12,8 +12,7 @@ import org.wc.webserver.protocol.http.AbstractHttpServer;
 import org.wc.webserver.protocol.http.HttpHandler;
 import org.wc.webserver.protocol.http.servlet.DispatcherServlet;
 import org.wc.webserver.protocol.http.servlet.ServletManager;
-import org.wc.webserver.support.ConfigurationTools;
-import org.wc.webserver.support.ServerModule;
+import org.wc.webserver.support.ServerModel;
 import org.wc.webserver.utils.NetUtils;
 
 import java.io.File;
@@ -28,9 +27,9 @@ public class TomcatHttpServer extends AbstractHttpServer {
 
     private Tomcat tomcat;
 
-    private ServerModule module;
+    private ServerModel module;
 
-    public TomcatHttpServer(ServerModule module, HttpHandler handler) {
+    public TomcatHttpServer(ServerModel module, HttpHandler handler) {
         super(handler);
         this.module = module;
         DispatcherServlet.addHandler(module.getPort(), handler);
@@ -71,9 +70,9 @@ public class TomcatHttpServer extends AbstractHttpServer {
         }
     }
 
-    private void setFilter (ServerModule module,Context context){
-        List<ServerModule.AcceptorFilter> filters = module.getFilters();
-        for (ServerModule.AcceptorFilter filter:filters){
+    private void setFilter (ServerModel module, Context context){
+        List<ServerModel.AcceptorFilter> filters = module.getFilters();
+        for (ServerModel.AcceptorFilter filter:filters){
             checkFilter(filter);
             FilterDef filterDef = new FilterDef();
             filterDef.setFilterName(filter.getName());

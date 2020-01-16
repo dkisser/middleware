@@ -1,7 +1,7 @@
 package org.wc.tinycat.reader;
 
 import org.junit.Test;
-import org.wc.webserver.support.ServerModule;
+import org.wc.webserver.support.ServerModel;
 import org.wc.webserver.support.resoruce.reader.ClassPathXmlReader;
 
 import java.util.List;
@@ -14,7 +14,7 @@ public class ClassPathXmlReaderTest {
     @Test
     public void testClassPathXmlReader (){
         ClassPathXmlReader reader = new ClassPathXmlReader("server.xml");
-        List<ServerModule> module = reader.parse();
+        List<ServerModel> module = reader.parse();
         System.out.println(module);
     }
 

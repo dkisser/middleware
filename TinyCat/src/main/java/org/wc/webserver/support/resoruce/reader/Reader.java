@@ -1,7 +1,6 @@
 package org.wc.webserver.support.resoruce.reader;
 
-import org.wc.webserver.support.ServerModule;
-import org.wc.webserver.support.resoruce.ResourceLoader;
+import org.wc.webserver.support.ServerModel;
 
 import java.util.List;
 
@@ -12,5 +11,5 @@ public interface Reader {
 
     String serverIp();
 
-    List<ServerModule> parse();
+    List<ServerModel> parse();
 }

@@ -1,7 +1,7 @@
 package org.wc.webserver.protocol.tcp;
 
 import org.wc.prettydog.annotation.SPI;
-import org.wc.webserver.support.ServerModule;
+import org.wc.webserver.support.ServerModel;
 
 /**
  * Created by WenChen on 2020/1/2.
@@ -9,5 +9,5 @@ import org.wc.webserver.support.ServerModule;
 @SPI("netty")
 public interface TcpBinder {
 
-    TcpServer bind(ServerModule module,TcpHandler handler);
+    TcpServer bind(ServerModel module, TcpHandler handler);
 }

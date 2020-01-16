@@ -2,7 +2,7 @@ package org.wc.webserver.support.resoruce.reader;
 
 import org.w3c.dom.*;
 import org.wc.prettydog.support.ExtensionLoader;
-import org.wc.webserver.support.ServerModule;
+import org.wc.webserver.support.ServerModel;
 import org.wc.webserver.support.resoruce.Resource;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -15,7 +15,7 @@ import java.util.List;
 public class DomXmlParser implements XmlParser {
 
     @Override
-    public List<ServerModule> parseResource(Resource resource) {
+    public List<ServerModel> parseResource(Resource resource) {
         try {
             return parseFile(resource.getFile());
         } catch (IOException e) {
@@ -24,8 +24,8 @@ public class DomXmlParser implements XmlParser {
     }
 
     @Override
-    public List<ServerModule> parseFile(File file) {
-        List<ServerModule> modules = new ArrayList<>();
+    public List<ServerModel> parseFile(File file) {
+        List<ServerModel> modules = new ArrayList<>();
         Document document = getDocument(file);
         Element element = document.getDocumentElement();
         if (!"acceptors".equals(element.getTagName()))
@@ -35,7 +35,7 @@ public class DomXmlParser implements XmlParser {
         NodeList nodeList = element.getChildNodes();
         for (int i =0,length=nodeList.getLength();i<length;i++){
             Node node = nodeList.item(i);
-            ServerModule module= parseAcceptor(node);
+            ServerModel module= parseAcceptor(node);
             if (module!=null)
                 modules.add(module);
         }
@@ -55,8 +55,8 @@ public class DomXmlParser implements XmlParser {
         return document;
     }
 
-    private ServerModule parseAcceptor(Node node){
-        ServerModule module = null;
+    private ServerModel parseAcceptor(Node node){
+        ServerModel module = null;
         if ("acceptor".equals(node.getNodeName())){
             NamedNodeMap map = node.getAttributes();
             checkAcceptor(map);

@@ -4,9 +4,8 @@ import org.wc.prettydog.support.ExtensionLoader;
 import org.wc.webserver.conf.Constants;
 import org.wc.webserver.protocol.AbstractProtocol;
 import org.wc.webserver.protocol.Server;
-import org.wc.webserver.protocol.http.HttpHandler;
 import org.wc.webserver.support.ConfigurationTools;
-import org.wc.webserver.support.ServerModule;
+import org.wc.webserver.support.ServerModel;
 import org.wc.webserver.utils.ReflectUtils;
 
 /**
@@ -23,7 +22,7 @@ public class TcpProtocol extends AbstractProtocol {
     }
 
     @Override
-    public Server exportForModule(ServerModule module) {
+    public Server exportForModule(ServerModel module) {
         String resolverName = module.getHandler().getRef();
         TcpHandler handler = ReflectUtils.getInstance(resolverName,TcpHandler.class);
         return binder.bind(module,handler);

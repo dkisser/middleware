@@ -1,5 +1,7 @@
 package org.wc.webserver.protocol.http;
 
+import org.wc.webserver.support.RequestResponseModel;
+
 import javax.servlet.ServletInputStream;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
@@ -33,5 +35,10 @@ public class DefaultHttpHandler implements HttpHandler {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void handler(RequestResponseModel model) {
+
     }
 }

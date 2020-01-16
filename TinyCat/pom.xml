@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <artifactId>TinyCat</artifactId>
-    <version>1.1-RELEASE</version>
+    <version>1.1.0-SNAPSHOT</version>
     <parent>
         <groupId>org.wc</groupId>
         <artifactId>midware</artifactId>
@@ -15,7 +15,8 @@
     <url>https://github.com/dkisser</url>
 
     <properties>
-        <netty.version>4.1.42.Final</netty.version>
+        <netty.version>4.1.25.Final</netty.version>
+        <prettydog.version>1.0-SNAPSHOT</prettydog.version>
     </properties>
 
     <dependencies>

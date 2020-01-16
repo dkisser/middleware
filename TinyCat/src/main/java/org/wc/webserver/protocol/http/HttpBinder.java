@@ -1,7 +1,7 @@
 package org.wc.webserver.protocol.http;
 
 import org.wc.prettydog.annotation.SPI;
-import org.wc.webserver.support.ServerModule;
+import org.wc.webserver.support.ServerModel;
 
 /**
  * Created by WenChen on 2019/12/26.
@@ -9,5 +9,5 @@ import org.wc.webserver.support.ServerModule;
 @SPI("jetty")
 public interface HttpBinder {
 
-    HttpServer bind(ServerModule module, HttpHandler hander);
+    HttpServer bind(ServerModel module, HttpHandler hander);
 }

@@ -5,7 +5,7 @@ import org.wc.webserver.conf.Constants;
 import org.wc.webserver.protocol.AbstractProtocol;
 import org.wc.webserver.protocol.Server;
 import org.wc.webserver.support.ConfigurationTools;
-import org.wc.webserver.support.ServerModule;
+import org.wc.webserver.support.ServerModel;
 import org.wc.webserver.utils.ReflectUtils;
 
 /**
@@ -27,7 +27,7 @@ public class HttpProtocol extends AbstractProtocol {
 
 
     @Override
-    public Server exportForModule(ServerModule module) {
+    public Server exportForModule(ServerModel module) {
         String resolverName = module.getHandler().getRef();
         HttpHandler handler = ReflectUtils.getInstance(resolverName,HttpHandler.class);
         return binder.bind(module,handler);

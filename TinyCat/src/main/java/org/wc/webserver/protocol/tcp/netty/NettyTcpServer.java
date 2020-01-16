@@ -17,7 +17,7 @@ import org.wc.webserver.conf.Constants;
 import org.wc.webserver.protocol.tcp.AbstractTcpServer;
 import org.wc.webserver.protocol.tcp.TcpHandler;
 import org.wc.webserver.protocol.tcp.netty.decoder.CustomTcpDecoderDelegate;
-import org.wc.webserver.support.ServerModule;
+import org.wc.webserver.support.ServerModel;
 
 /**
  * Created by WenChen on 2020/1/2.
@@ -26,7 +26,7 @@ public class NettyTcpServer extends AbstractTcpServer {
 
     private Logger logger = LoggerFactory.getLogger(NettyTcpServer.class);
 
-    private ServerModule module;
+    private ServerModel module;
 
     private EventLoopGroup bossGroup;
 
@@ -36,7 +36,7 @@ public class NettyTcpServer extends AbstractTcpServer {
 
     private Channel channel;
 
-    public NettyTcpServer(ServerModule module,TcpHandler handler) {
+    public NettyTcpServer(ServerModel module, TcpHandler handler) {
         super(handler);
         this.module = module;
         //bind server
@@ -86,7 +86,7 @@ public class NettyTcpServer extends AbstractTcpServer {
 
     }
 
-    private void setDecoder(ChannelPipeline pipeline,ServerModule module){
+    private void setDecoder(ChannelPipeline pipeline,ServerModel module){
         String type = module.getAttribute("type","delimiter");
         if (!StringUtils.hasText(type)){
             pipeline.addLast("defaultDecoder",new DelimiterBasedFrameDecoder(Integer

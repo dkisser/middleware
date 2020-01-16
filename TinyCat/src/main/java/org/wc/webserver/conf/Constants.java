@@ -1,5 +1,7 @@
 package org.wc.webserver.conf;
 
+import org.wc.webserver.support.Version;
+
 /**
  * Created by WenChen on 2019/12/30.
  */
@@ -60,4 +62,8 @@ public class Constants {
     public static final String TCP_MAXFRAMELENGTH_KEY = "maxFrameLength";
 
     public static final String TCP_MAXFRAMELENGTH_VALUE = "1024";
+
+    public static final String TINYCAT_VERSION_KEY = "tinycat.version";
+
+    public static final String TINYCAT_VERSION_VALUE = Version.getVersion(Version.class,"");
 }

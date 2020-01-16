@@ -6,7 +6,7 @@ import org.wc.prettydog.support.logger.LoggerFactory;
 import org.wc.webserver.conf.Constants;
 import org.wc.webserver.protocol.Protocol;
 import org.wc.webserver.support.ConfigurationTools;
-import org.wc.webserver.support.ServerModule;
+import org.wc.webserver.support.ServerModel;
 import org.wc.webserver.support.resoruce.reader.ClassPathXmlReader;
 import org.wc.webserver.support.resoruce.reader.Reader;
 
@@ -22,7 +22,7 @@ public class BootStrapMain {
 
     private static Logger logger = LoggerFactory.getLogger(BootStrapMain.class);
 
-    private static List<ServerModule> moduleList = new ArrayList<>();
+    private static List<ServerModel> moduleList = new ArrayList<>();
 
     //server start flag
     private static AtomicBoolean isStart = new AtomicBoolean(false);
@@ -50,8 +50,8 @@ public class BootStrapMain {
     }
 
     private static void startServers (Reader reader){
-        List<ServerModule> modules = reader.parse();
-        for (ServerModule module:modules){
+        List<ServerModel> modules = reader.parse();
+        for (ServerModel module:modules){
             Protocol protocol = ExtensionLoader.getExtensionLoader(Protocol.class)
                     .getExtensionById(module.getProtocolType());
             if(protocol == null){
@@ -78,7 +78,7 @@ public class BootStrapMain {
         if (moduleList.size() == 0){
             return ;
         }
-        for (ServerModule module:moduleList){
+        for (ServerModel module:moduleList){
             Protocol protocol = ExtensionLoader.getExtensionLoader(Protocol.class)
                     .getExtensionById(module.getProtocolType());
             protocol.unexport(module.getPort());

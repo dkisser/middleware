@@ -1,6 +1,8 @@
 package org.wc.webserver.protocol.http;
 
 
+import org.wc.webserver.support.RequestResponseModel;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -9,5 +11,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 public interface HttpHandler {
 
-    void handler(HttpServletRequest request, HttpServletResponse response);
+    @Deprecated
+    default void handler(HttpServletRequest request, HttpServletResponse response){}
+
+    void handler(RequestResponseModel model);
 }

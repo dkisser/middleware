@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * Created by WenChen on 2019/12/27.
  */
-public class ServerModule {
+public class ServerModel {
 
     private int port;
 

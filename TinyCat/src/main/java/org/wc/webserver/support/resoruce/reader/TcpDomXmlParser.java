@@ -2,15 +2,15 @@ package org.wc.webserver.support.resoruce.reader;
 
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.wc.webserver.support.ServerModule;
+import org.wc.webserver.support.ServerModel;
 
 /**
  * Created by WenChen on 2020/1/6.
  */
 public class TcpDomXmlParser implements ProtocolXmlParser{
     @Override
-    public ServerModule parseByProtocol(Node node) {
-        ServerModule module = new ServerModule();
+    public ServerModel parseByProtocol(Node node) {
+        ServerModel module = new ServerModel();
         NodeList childList = node.getChildNodes();
         for (int i=0,length=childList.getLength();i<length;i++){
             Node child = childList.item(i);

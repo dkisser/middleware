@@ -17,8 +17,7 @@ import org.wc.webserver.protocol.http.AbstractHttpServer;
 import org.wc.webserver.protocol.http.HttpHandler;
 import org.wc.webserver.protocol.http.servlet.DispatcherServlet;
 import org.wc.webserver.protocol.http.servlet.ServletManager;
-import org.wc.webserver.support.ConfigurationTools;
-import org.wc.webserver.support.ServerModule;
+import org.wc.webserver.support.ServerModel;
 import org.wc.webserver.utils.NetUtils;
 
 import java.util.List;
@@ -32,10 +31,10 @@ public class JettyHttpServer extends AbstractHttpServer {
 
     private Server server;
 
-    private ServerModule module;
+    private ServerModel module;
 
     //TODO SET maxConnections 、keepaliveTime
-    public JettyHttpServer(ServerModule module,HttpHandler handler) {
+    public JettyHttpServer(ServerModel module, HttpHandler handler) {
         super(handler);
         this.module = module;
         Log.setLog(new StdErrLog());
@@ -92,9 +91,9 @@ public class JettyHttpServer extends AbstractHttpServer {
         }
     }
 
-    private void setFilter(ServerModule module,Context context,ServletHandler servletHandler){
-        List<ServerModule.AcceptorFilter> filters = module.getFilters();
-        for (ServerModule.AcceptorFilter filter:filters){
+    private void setFilter(ServerModel module, Context context, ServletHandler servletHandler){
+        List<ServerModel.AcceptorFilter> filters = module.getFilters();
+        for (ServerModel.AcceptorFilter filter:filters){
             checkFilter(filter);
             FilterHolder f = servletHandler.addFilterWithMapping(filter.getRef(),filter.getUrlPattern(), Context.REQUEST);
             context.addFilter(f,"/*",Context.REQUEST);
