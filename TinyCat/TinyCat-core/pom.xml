@@ -13,7 +13,7 @@
     <artifactId>TinyCat-core</artifactId>
 
     <properties>
-        <netty.version>4.1.25.Final</netty.version>
+        <netty.version>4.1.42.Final</netty.version>
         <prettydog.version>1.0-SNAPSHOT</prettydog.version>
     </properties>
 
