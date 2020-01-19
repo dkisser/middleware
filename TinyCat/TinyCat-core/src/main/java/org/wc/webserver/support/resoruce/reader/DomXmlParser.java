@@ -60,6 +60,11 @@ public class DomXmlParser implements XmlParser {
         if ("acceptor".equals(node.getNodeName())){
             NamedNodeMap map = node.getAttributes();
             checkAcceptor(map);
+            Node nameNode = map.getNamedItem("name");
+            String name = null;
+            if(nameNode != null){
+                name = nameNode.getNodeValue();
+            }
             String port = map.getNamedItem("port").getNodeValue();
             String protocolType = map.getNamedItem("type").getNodeValue();
             ProtocolXmlParser protocolParser = ExtensionLoader.getExtensionLoader(ProtocolXmlParser.class)
@@ -67,7 +72,9 @@ public class DomXmlParser implements XmlParser {
             module = protocolParser.parseByProtocol(node);
             module.setPort(Integer.parseInt(port));
             module.setProtocolType(protocolType);
-
+            if (name != null){
+                module.setName(name);
+            }
             if (!node.hasChildNodes())
                 throw new IllegalArgumentException("acceptor must contains child node");
             if (module.getHandler() == null)

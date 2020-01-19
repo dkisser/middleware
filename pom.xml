@@ -34,6 +34,7 @@
         <jetty_version>6.1.26</jetty_version>
         <tomcat_embed_version>8.5.31</tomcat_embed_version>
         <javassist_version>3.20.0-GA</javassist_version>
+        <spring-core.version>5.1.8.RELEASE</spring-core.version>
     </properties>
     <dependencies>
         <!--junit-->

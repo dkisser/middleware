@@ -4,6 +4,7 @@ import org.wc.prettydog.support.ExtensionLoader;
 import org.wc.webserver.conf.Constants;
 import org.wc.webserver.protocol.AbstractProtocol;
 import org.wc.webserver.protocol.Server;
+import org.wc.webserver.spring.SpringApplicationContext;
 import org.wc.webserver.support.ConfigurationTools;
 import org.wc.webserver.support.ServerModel;
 import org.wc.webserver.utils.ReflectUtils;
@@ -23,8 +24,10 @@ public class TcpProtocol extends AbstractProtocol {
 
     @Override
     public Server exportForModule(ServerModel module) {
-        String resolverName = module.getHandler().getRef();
-        TcpHandler handler = ReflectUtils.getInstance(resolverName,TcpHandler.class);
+        TcpHandler handler = SpringApplicationContext.getObjct(TcpHandler.class,module.getName());
+        ReflectUtils.isAssignableFrom(handler.getClass(),TcpHandler.class);
+//        String resolverName = module.getHandler().getRef();
+//        TcpHandler handler = ReflectUtils.getInstance(resolverName,TcpHandler.class);
         TcpHandler wrapper = TcpFilterWrapper.buildFilterChain(handler,module);
         return binder.bind(module,wrapper);
     }

@@ -303,4 +303,8 @@ public class ExtensionLoader<T> {
     public Map<String,T> getExtensionAllClasses(){
         return singletone;
     }
+
+    public Set<String> getSupportExtension (){
+        return this.extensionClass.keySet();
+    }
 }

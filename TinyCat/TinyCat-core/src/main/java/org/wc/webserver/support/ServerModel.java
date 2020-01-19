@@ -10,6 +10,8 @@ import java.util.Map;
  */
 public class ServerModel {
 
+    private String name;
+
     private int port;
 
     private String protocolType;
@@ -56,7 +58,16 @@ public class ServerModel {
         this.attributes.put(key,value);
     }
 
-    public String getAttribute(String key,String defaultVal){
+    public String getName() {
+        return name;
+    }
+
+    public ServerModel setName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public String getAttribute(String key, String defaultVal){
         String val = this.attributes.get(key);
         if (val == null){
             val = defaultVal;

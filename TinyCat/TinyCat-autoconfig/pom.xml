@@ -15,7 +15,6 @@
 
     <properties>
         <TinyCat-core.version>1.1.0-SNAPSHOT</TinyCat-core.version>
-        <spring-core.version>5.1.8.RELEASE</spring-core.version>
     </properties>
 
     <dependencies>
@@ -29,7 +28,6 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>${spring-core.version}</version>
-            <scope>compile</scope>
         </dependency>
     </dependencies>
 

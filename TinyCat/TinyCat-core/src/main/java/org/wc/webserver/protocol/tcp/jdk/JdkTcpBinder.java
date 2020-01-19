@@ -12,6 +12,7 @@ public class JdkTcpBinder implements TcpBinder {
 
     @Override
     public TcpServer bind(ServerModel module, TcpHandler handler) {
-        return new JdkTcpServer(module,handler);
+        throw new UnsupportedOperationException("This way not supported");
+//        return new JdkTcpServer(module,handler);
     }
 }

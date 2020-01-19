@@ -7,6 +7,7 @@ import org.wc.webserver.conf.Constants;
 import org.wc.webserver.protocol.Protocol;
 import org.wc.webserver.support.ConfigurationTools;
 import org.wc.webserver.support.ServerModel;
+import org.wc.webserver.support.resoruce.reader.ApplicationReader;
 import org.wc.webserver.support.resoruce.reader.ClassPathXmlReader;
 import org.wc.webserver.support.resoruce.reader.Reader;
 
@@ -43,9 +44,10 @@ public class BootStrapMain {
 
     //TODO adapt other resources eg: yml 、 properties
     private static Reader loadResources (){
-        String serverFile = ConfigurationTools.getString(Constants.DEFAULT_IN_SERVER_KEY,Constants
-                .DEFAULT_IN_SEREVER_VALUE);
-        ClassPathXmlReader reader = new ClassPathXmlReader(serverFile);
+//        String serverFile = ConfigurationTools.getString(Constants.DEFAULT_IN_SERVER_KEY,Constants
+//                .DEFAULT_IN_SEREVER_VALUE);
+//        ClassPathXmlReader reader = new ClassPathXmlReader(serverFile);
+        ApplicationReader reader = new ApplicationReader();
         return reader;
     }
 
