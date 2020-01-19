@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:tinycat="http://tinycat.wc.org/schema/tinycat"
+            xmlns="http://www.springframework.org/schema/beans"
+            xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+            http://tinycat.wc.org/schema/tinycat
+            http://tinycat.wc.org/schema/tinycat.xsd">
+    <tinycat:acceptors>
+        <tinycat:acceptor name="acc1" port="19996" type="http">
+            <tinycat:filters>
+                <!--<tinycat:filter name="testFilter" url-pattern="/test/*" ref="org.wc.tinycat.protocol.HttpFilterTest"/>-->
+                <!--<tinycat:filter name="testFilter" url-pattern="/test/*" ref="org.wc.tinycat.protocol.HttpFilterTest"/>-->
+            </tinycat:filters>
+            <tinycat:attribute consoleEncoding="UTF-8" maxThreads="200"/>
+            <tinycat:handler ref="com.example.demo.tinycat.TinyCatHttpHandler"/>
+        </tinycat:acceptor>
+        <tinycat:acceptor name="acc2" port="19997" type="tcp">
+            <tinycat:filters>
+                <tinycat:filter ref="com.example.demo.tinycat.TcpFilterTest"/>
+                <tinycat:filter ref="com.example.demo.tinycat.TcpPingFilter"/>
+            </tinycat:filters>
+            <tinycat:attribute consoleEncoding="UTF-8" maxThreads="200" type="lengbased"/>
+            <tinycat:handler ref="com.example.demo.tinycat.DefaultTcpHandler"/>
+        </tinycat:acceptor>
+    </tinycat:acceptors>
+</beans>
