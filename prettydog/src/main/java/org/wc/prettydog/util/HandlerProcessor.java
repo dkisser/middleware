@@ -12,7 +12,8 @@ import java.net.URLDecoder;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-@Component
+//@Component
+@Deprecated
 public class HandlerProcessor implements BeanFactoryPostProcessor {
 
     private static final String PACKAGE_SCAN_PATH = "org.wc.prettydog.util";

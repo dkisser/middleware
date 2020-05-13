@@ -17,6 +17,8 @@ import java.util.concurrent.ConcurrentHashMap;
 @Component
 public class GenSeqHelper {
 
+    private Object lock = new Object();
+
     @Autowired
     private CSequenceMapper cSequenceMapper;
 
@@ -49,19 +51,13 @@ public class GenSeqHelper {
             }});
             seq = new Seq(0,cachSz,stepSz);
         } else {
-            currentVal = detail.getCurrentVal();
-            allocated = detail.getAllocated();
-            int temp = cachSz - currentVal;
-            if (temp < stepSz){
-                seq = new Seq(temp,cachSz,stepSz);
-                cSequenceDetailMapper.updateSelectiveBySeqNo(new CSequenceDetail(){{
-                    setSeqNo(seqNo);
-                    setAllocated(allocated + 1);
-                    setUpdateTime(new Date());
-                }});
-            }  else {//
-                seq = new Seq(cachSz*allocated,(cachSz+1)*cachSz,stepSz);
-            }
+            allocated = detail.getAllocated()+1;
+            seq = new Seq(cachSz*allocated,(allocated+1)*cachSz,stepSz);
+            cSequenceDetailMapper.updateSelectiveBySeqNo(new CSequenceDetail(){{
+                setSeqNo(seqNo);
+                setAllocated(allocated);
+                setUpdateTime(new Date());
+            }});
         }
         cache.put(seqNo,seq);
         return seq;
@@ -71,11 +67,22 @@ public class GenSeqHelper {
         Seq seq = cache.getOrDefault(seqNo,null);
         //为空说明是第一次取
         if (seq == null){
-            seq = initSeq(seqNo);
+            synchronized (lock){
+                if (seq == null){
+                    seq = initSeq(seqNo);
+                }
+            }
         }
         int result = seq.getNext();
         if (result == -1){
-            initSeq(seqNo);
+            synchronized (lock){
+                result = seq.getNext();
+                if (result == -1){
+                    seq = initSeq(seqNo);
+                    return seq.getNext();
+                }
+            }
+
         }
         return result;
     }
