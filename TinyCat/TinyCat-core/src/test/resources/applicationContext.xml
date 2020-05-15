@@ -8,10 +8,10 @@
             http://tinycat.wc.org/schema/tinycat.xsd">
     <tinycat:acceptors>
         <tinycat:acceptor name="acc1" port="19996" type="http">
-            <tinycat:filters>
-                <!--<tinycat:filter name="testFilter" url-pattern="/test/*" ref="org.wc.tinycat.protocol.HttpFilterTest"/>-->
-                <!--<tinycat:filter name="testFilter" url-pattern="/test/*" ref="org.wc.tinycat.protocol.HttpFilterTest"/>-->
-            </tinycat:filters>
+            <!--<tinycat:filters>
+                <tinycat:filter name="testFilter" url-pattern="/test/*" ref="org.wc.tinycat.protocol.HttpFilterTest"/>
+                <tinycat:filter name="testFilter" url-pattern="/test/*" ref="org.wc.tinycat.protocol.HttpFilterTest"/>
+            </tinycat:filters>-->
             <tinycat:attribute consoleEncoding="UTF-8" maxThreads="200"/>
             <tinycat:handler ref="com.example.demo.tinycat.TinyCatHttpHandler"/>
         </tinycat:acceptor>
