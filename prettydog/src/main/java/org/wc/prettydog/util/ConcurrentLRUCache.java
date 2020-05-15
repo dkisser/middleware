@@ -16,6 +16,8 @@ public class ConcurrentLRUCache<K,V> extends LRUMap<K,V> {
 
     private int size;
 
+    private Object lock = new Object();
+
     public ConcurrentLRUCache(int capacity) {
         super(capacity);
         size = capacity;
@@ -25,8 +27,11 @@ public class ConcurrentLRUCache<K,V> extends LRUMap<K,V> {
 
     @Override
     protected boolean removeEldestEntry(Map.Entry<K,V> eldest) {
-        cache.offer(eldest);
-        return super.removeEldestEntry(eldest);
+        boolean result = super.removeEldestEntry(eldest);
+        if (result){
+            cache.offer(eldest);
+        }
+        return result;
     }
 
     public V get(Object key){
@@ -34,7 +39,7 @@ public class ConcurrentLRUCache<K,V> extends LRUMap<K,V> {
         if (result == null){
             result = longTerm.get(key);
             if (result != null){
-                super.put((K)key,result);
+                setValue((K)key,result);
             }
         }
         return result;
@@ -51,7 +56,13 @@ public class ConcurrentLRUCache<K,V> extends LRUMap<K,V> {
                 }
             }
         }
-        return super.put(k,v);
+        return setValue(k,v);
+    }
+
+    public V setValue (K k,V v){
+        synchronized (lock){
+            return super.put(k,v);
+        }
     }
 
     private void refreshLongTerm(){
