@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * Created by WenChen on 2019/11/11.
  */
-public class LRUMap<K,V> extends LinkedHashMap{
+public class LRUMap<K,V> extends LinkedHashMap<K,V>{
 
     private int capacity;
 
@@ -16,7 +16,7 @@ public class LRUMap<K,V> extends LinkedHashMap{
     }
 
     @Override
-    protected boolean removeEldestEntry(Map.Entry eldest) {
+    protected boolean removeEldestEntry(Map.Entry<K,V> eldest) {
         if (size() > capacity){
             return true;
         }
