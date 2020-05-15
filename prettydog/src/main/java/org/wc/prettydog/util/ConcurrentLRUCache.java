@@ -29,18 +29,18 @@ public class ConcurrentLRUCache<K,V> extends LRUMap<K,V> {
         return super.removeEldestEntry(eldest);
     }
 
-    public V getCache(K key){
-        V result = get(key);
+    public V get(Object key){
+        V result = super.get(key);
         if (result == null){
             result = longTerm.get(key);
             if (result != null){
-                put(key,result);
+                super.put((K)key,result);
             }
         }
         return result;
     }
 
-    public V putCache (K k,V v){
+    public V put (K k,V v){
         if(size() >= size){
             synchronized (longTerm){//lock frequently is a question
                 if (size() >= size){//maybe someone used remove caused size() < size
@@ -51,7 +51,7 @@ public class ConcurrentLRUCache<K,V> extends LRUMap<K,V> {
                 }
             }
         }
-        return put(k,v);
+        return super.put(k,v);
     }
 
     private void refreshLongTerm(){
