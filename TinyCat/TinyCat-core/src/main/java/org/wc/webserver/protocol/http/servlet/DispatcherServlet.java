@@ -54,7 +54,7 @@ public class DispatcherServlet extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpHandler handler = HANDLERS.get(req.getLocalPort());
         if (handler == null){
-            resp.sendError(HttpServletResponse.SC_NOT_FOUND,"Service not found");
+            resp.sendError(HttpServletResponse.SC_NOT_FOUND,"URL not found");
         } else {
             String version = ConfigurationTools.getString(Constants.TINYCAT_VERSION_KEY,Constants
                     .TINYCAT_VERSION_VALUE);
