@@ -1,0 +1,1 @@
+curator=org.wc.prettydog.mselect.transporter.CuratorZookeeperClient

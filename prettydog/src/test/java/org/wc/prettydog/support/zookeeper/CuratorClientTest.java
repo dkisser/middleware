@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * Created by WenChen on 2019/12/19.
  */
-public class ZkClientTest {
+public class CuratorClientTest {
 
     private CuratorFramework client;
 

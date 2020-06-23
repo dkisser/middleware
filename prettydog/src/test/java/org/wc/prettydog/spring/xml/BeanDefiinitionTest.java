@@ -1,6 +1,7 @@
 package org.wc.prettydog.spring.xml;
 
 import org.junit.Test;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.wc.prettydog.util.itest.TestInterface;
 
@@ -19,4 +20,5 @@ public class BeanDefiinitionTest {
         testInterface.handler();
         context.stop();
     }
+
 }

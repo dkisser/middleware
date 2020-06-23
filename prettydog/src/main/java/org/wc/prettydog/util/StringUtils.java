@@ -55,4 +55,39 @@ public class StringUtils {
         }
         return sb.toString();
     }
+
+    public static boolean isNumber(String str){
+        try {
+            new Double(str);
+        } catch (NumberFormatException e){
+            return false;
+        }
+        return true;
+    }
+
+    public static boolean isInteger(String str){
+        try {
+            new Integer(str);
+        } catch (NumberFormatException e){
+            return false;
+        }
+        return true;
+    }
+
+    public static boolean isPositiveInteger(String str){
+        Integer i;
+        try {
+            i = new Integer(str);
+        } catch (NumberFormatException e){
+            return false;
+        }
+        if (i<=0){
+            return false;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isInteger("-11"));
+    }
 }

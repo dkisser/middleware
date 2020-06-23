@@ -27,10 +27,7 @@ public class GenSeqTest {
 
     @Test
     public void testDB (){
-        CSequence sequence = cSequenceMapper.selectOne(new CSequence(){{setSeqNo("test");}});
-        System.out.println(sequence);
-        List<CSequence> sequenceList = cSequenceMapper.select(new CSequence(){{setSeqNo("test");}});
-        System.out.println(sequenceList);
+        System.out.println();
     }
 
     @Test
