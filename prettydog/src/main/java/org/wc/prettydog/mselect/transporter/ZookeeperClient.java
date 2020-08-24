@@ -10,15 +10,15 @@ import java.util.List;
 @SPI(CuratorZookeeperClient.NAME)
 public interface ZookeeperClient {
 
-    void create(String path,boolean ephemeral) throws Exception;
+    void create(String path,boolean ephemeral);
 
-    String createEphemeralSequence(String path) throws Exception;
+    String createEphemeralSequence(String path);
 
-    void delete(String path) throws Exception;
+    void delete(String path);
 
-    List<String> select(String path) throws Exception;
+    List<String> select(String path);
 
-    List<String> addListener(String path,ZookeeperListener listener) throws Exception;
+    List<String> addListener(String path,ZookeeperListener listener);
 
     void close();
 }

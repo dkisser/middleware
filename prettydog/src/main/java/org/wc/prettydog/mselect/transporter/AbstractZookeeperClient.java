@@ -19,7 +19,7 @@ public abstract class AbstractZookeeperClient<TargetListener> implements Zookeep
     private Map<String,Map<ZookeeperListener,TargetListener>> listeners = new ConcurrentHashMap<>();
 
     @Override
-    public void create(String path,boolean ephemeral) throws Exception {
+    public void create(String path,boolean ephemeral) {
         if (!ephemeral) {
             if (checkExists(path)) {
                 return;
@@ -37,7 +37,7 @@ public abstract class AbstractZookeeperClient<TargetListener> implements Zookeep
     }
 
     @Override
-    public String createEphemeralSequence (String path) throws Exception{
+    public String createEphemeralSequence (String path) {
         int index = path.lastIndexOf("/");
         if (index > 0) {
             create(path.substring(0,index),false);
@@ -46,7 +46,7 @@ public abstract class AbstractZookeeperClient<TargetListener> implements Zookeep
     }
 
     @Override
-    public List<String> addListener(String path, ZookeeperListener listener) throws Exception {
+    public List<String> addListener(String path, ZookeeperListener listener) {
         Map<ZookeeperListener,TargetListener> lis = listeners.get(path);
         if (lis == null){
             listeners.putIfAbsent(path,new ConcurrentHashMap<>());
@@ -73,18 +73,18 @@ public abstract class AbstractZookeeperClient<TargetListener> implements Zookeep
         }
     }
 
-    protected abstract List<String> addListener(String path, TargetListener listner) throws Exception;
+    protected abstract List<String> addListener(String path, TargetListener listner);
 
     protected abstract TargetListener createTargetListener(String path,ZookeeperListener listener);
 
-    protected abstract void doCreateEphemeral(String path) throws Exception;
+    protected abstract void doCreateEphemeral(String path);
 
-    protected abstract String doCreatePersistent(String path) throws Exception;
+    protected abstract String doCreatePersistent(String path);
 
-    protected abstract boolean checkExists (String path) throws Exception;
+    protected abstract boolean checkExists (String path);
 
     protected abstract void doClose() throws Exception;
 
-    protected abstract String doCreateEphemeralSequence(String path) throws Exception;
+    protected abstract String doCreateEphemeralSequence(String path);
 
 }

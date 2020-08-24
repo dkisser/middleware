@@ -5,6 +5,7 @@ import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.framework.api.CuratorWatcher;
 import org.apache.curator.retry.RetryNTimes;
 import org.apache.zookeeper.CreateMode;
+import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.WatchedEvent;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.core.env.Environment;
@@ -34,8 +35,14 @@ public class CuratorZookeeperClient extends AbstractZookeeperClient<CuratorWatch
     }
 
     @Override
-    protected List<String> addListener(String path, CuratorWatcher listner) throws Exception {
-        return curatorFramework.getChildren().usingWatcher(listner).forPath(path);
+    protected List<String> addListener(String path, CuratorWatcher listner) {
+        try {
+            return curatorFramework.getChildren().usingWatcher(listner).forPath(path);
+        } catch (KeeperException.NoNodeException e){
+            return Collections.emptyList();
+        } catch (Exception e) {
+            throw new IllegalStateException(e.getMessage(),e);
+        }
     }
 
     @Override
@@ -44,42 +51,74 @@ public class CuratorZookeeperClient extends AbstractZookeeperClient<CuratorWatch
     }
 
     @Override
-    protected void doCreateEphemeral(String path) throws Exception {
-        curatorFramework.create().withMode(CreateMode.EPHEMERAL).forPath(path);
-    }
-
-    @Override
-    protected String doCreatePersistent(String path) throws Exception {
-        return curatorFramework.create().forPath(path);
-    }
-
-    @Override
-    protected boolean checkExists(String path) throws Exception {
-        return curatorFramework.checkExists().forPath(path)!=null ? true:false;
-    }
-
-    @Override
-    protected void doClose() throws Exception {
-        curatorFramework.close();
-    }
-
-    @Override
-    protected String doCreateEphemeralSequence(String path) throws Exception {
-        return curatorFramework.create()
-                .withMode(CreateMode.EPHEMERAL_SEQUENTIAL)
-                .forPath(path);
-    }
-
-    @Override
-    public void delete(String path) throws Exception {
-        if (checkExists(path)){
-            curatorFramework.delete().forPath(path);
+    protected void doCreateEphemeral(String path) {
+        try {
+            curatorFramework.create().withMode(CreateMode.EPHEMERAL).forPath(path);
+        } catch (KeeperException.NodeExistsException e){
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
     @Override
-    public List<String> select(String path) throws Exception {
-        return curatorFramework.getChildren().forPath(path);
+    protected String doCreatePersistent(String path) {
+        try {
+            return curatorFramework.create().forPath(path);
+        } catch (KeeperException.NodeExistsException e){
+            return null;
+        } catch (Exception e) {
+            throw new IllegalStateException(e.getMessage(),e);
+        }
+    }
+
+    @Override
+    protected boolean checkExists(String path) {
+        try {
+            return curatorFramework.checkExists().forPath (path)!=null ? true:false;
+        } catch (Exception e) {
+        }
+        return false;
+    }
+
+    @Override
+    protected void doClose() {
+        curatorFramework.close();
+    }
+
+    @Override
+    protected String doCreateEphemeralSequence(String path) {
+        try {
+            return curatorFramework.create()
+                    .withMode(CreateMode.EPHEMERAL_SEQUENTIAL)
+                    .forPath(path);
+        } catch (KeeperException.NodeExistsException e) {
+            return null;
+        } catch (Exception e) {
+            throw new IllegalStateException(e.getMessage(),e);
+        }
+    }
+
+    @Override
+    public void delete(String path) {
+        if (checkExists(path)){
+            try {
+                curatorFramework.delete().forPath(path);
+            } catch (KeeperException.NoNodeException e) {
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    @Override
+    public List<String> select(String path) {
+        try {
+            return curatorFramework.getChildren().forPath(path);
+        } catch (KeeperException.NoNodeException e) {
+            return Collections.emptyList();
+        } catch (Exception e) {
+            throw new IllegalStateException(e.getMessage(),e);
+        }
     }
 
     @Override

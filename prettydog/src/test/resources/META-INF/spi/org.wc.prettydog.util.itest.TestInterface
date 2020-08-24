@@ -3,3 +3,4 @@ test=org.wc.prettydog.util.itest.TestInterfaceImpl
 test1=org.wc.prettydog.util.itest.TestInterfaceImpl1
 test2=org.wc.prettydog.util.itest.TestInterfaceImpl12
 testWrapper=org.wc.prettydog.util.itest.ExtensionWrapper
+testWrapper1=org.wc.prettydog.util.itest.ExtensionWrapper1

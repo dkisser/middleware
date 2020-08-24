@@ -12,6 +12,7 @@
     <modules>
         <module>prettydog</module>
         <module>TinyCat</module>
+        <module>netbar</module>
     </modules>
 
     <properties>
@@ -35,6 +36,7 @@
         <tomcat_embed_version>8.5.31</tomcat_embed_version>
         <javassist_version>3.20.0-GA</javassist_version>
         <spring-core.version>5.1.6.RELEASE</spring-core.version>
+        <maven_plugin_sufire.version>2.22.1</maven_plugin_sufire.version>
     </properties>
     <dependencies>
         <!--junit-->
@@ -166,6 +168,14 @@
                     <groupId>org.mortbay.jetty</groupId>
                     <artifactId>maven-jetty-plugin</artifactId>
                     <version>${plugin_jetty_version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven_plugin_sufire.version}</version>
+                    <configuration>
+                        <skip>true</skip>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>

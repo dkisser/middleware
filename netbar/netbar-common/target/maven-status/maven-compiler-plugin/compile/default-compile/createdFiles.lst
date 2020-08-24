@@ -1,0 +1,8 @@
+org\wc\midware\netbar\common\remote\Response.class
+org\wc\midware\netbar\common\DefaultRPCHandlerImpl.class
+org\wc\midware\netbar\common\JsonResolver.class
+org\wc\midware\netbar\common\DefaultResult.class
+org\wc\midware\netbar\common\DefaultInvocation.class
+org\wc\midware\netbar\common\remote\DefaultRequest.class
+org\wc\midware\netbar\common\config\Parser.class
+org\wc\midware\netbar\common\config\AbstractConfigBean.class

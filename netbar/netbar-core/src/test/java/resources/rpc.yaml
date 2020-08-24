@@ -1,0 +1,56 @@
+- tag: test
+  protocolConfigs:
+    host: 127.0.0.2
+    port: 6666
+    protocol: test
+  serviceConfigs:
+    - serviceId: test11
+      group: fd
+      version: ew
+      impl: org.wc.midware.common.DefaultRPCHandlerImpl
+      serviceConfigParam:
+        test1: 1
+        test2: 2
+
+    - serviceId: test12
+      group: fd
+      version: 3
+      impl: org.wc.midware.common.DefaultRPCHandlerImpl
+      serviceConfigParam:
+        test1: 3
+        test2: 4
+        test4: 2
+
+    - serviceId: test13
+      group: fd
+      version: 3
+      impl: org.wc.midware.common.DefaultRPCHandlerImpl
+
+---
+- tag: test2
+  protocolConfigs:
+    host: 127.0.0.3
+    port: 6666
+    protocol: test
+  serviceConfigs:
+    - serviceId: test21
+      group: fd
+      version: ew
+      impl: org.wc.midware.common.DefaultRPCHandlerImpl
+      serviceConfigParam:
+        test1: 1
+        test2: 2
+
+    - serviceId: test22
+      group: fd
+      version: 3
+      impl: org.wc.midware.common.DefaultRPCHandlerImpl
+      serviceConfigParam:
+        test1: 3
+        test2: 4
+        test4: 2
+
+    - serviceId: test23
+      group: fd
+      version: 3
+      impl: org.wc.midware.common.DefaultRPCHandlerImpl

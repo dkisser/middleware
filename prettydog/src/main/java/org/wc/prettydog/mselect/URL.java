@@ -221,13 +221,10 @@ public class URL {
             }
             sb.append(":").append(port);
         }
-        if (arguments != null){
+        if (arguments != null && arguments.size() > 0){
             sb.append("?");
-            for (Map.Entry<String,String> entry: arguments.entrySet()){
-                sb.append(entry.getKey()).append("=").append(entry.getValue()).append("&");
-            }
-            sb.setLength(sb.length()-1);
         }
+        sb.append(getArgumentStr());
         return sb.toString();
     }
 

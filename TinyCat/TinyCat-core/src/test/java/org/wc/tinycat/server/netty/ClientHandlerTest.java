@@ -32,7 +32,7 @@ public class ClientHandlerTest extends ChannelDuplexHandler {
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         super.channelActive(ctx);
         System.out.println("client connect");
-        String str = "666666";
+        String str = "6666661";
         int length = str.length();
         byte[] lengthArr = ByteUtils.Int2Byte_BE(length);
         byte[] arr = str.getBytes();

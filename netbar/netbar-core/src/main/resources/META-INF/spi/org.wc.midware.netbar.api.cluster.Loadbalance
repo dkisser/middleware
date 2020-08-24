@@ -1,0 +1,2 @@
+random=org.wc.midware.netbar.core.loadbalance.RandomLoadbanlance
+round=org.wc.midware.netbar.core.loadbalance.RoundLoadbalance

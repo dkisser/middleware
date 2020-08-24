@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>netbar</artifactId>
+        <groupId>org.wc.midware</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.wc.midware</groupId>
+    <artifactId>netbar-core</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <name>netbar-core</name>
+    <url>http://www.example.com</url>
+
+    <properties>
+        <netbar-api.version>1.0-SNAPSHOT</netbar-api.version>
+        <netbar-cluster.version>1.0-SNAPSHOT</netbar-cluster.version>
+        <netbar-common.version>1.0-SNAPSHOT</netbar-common.version>
+        <netbar-registry.version>1.0-SNAPSHOT</netbar-registry.version>
+        <netbar-transporter.version>1.0-SNAPSHOT</netbar-transporter.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.wc.midware</groupId>
+            <artifactId>netbar-api</artifactId>
+            <version>${netbar-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wc.midware</groupId>
+            <artifactId>netbar-cluster</artifactId>
+            <version>${netbar-cluster.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wc.midware</groupId>
+            <artifactId>netbar-common</artifactId>
+            <version>${netbar-common.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wc.midware</groupId>
+            <artifactId>netbar-registry</artifactId>
+            <version>${netbar-registry.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wc.midware</groupId>
+            <artifactId>netbar-transporter</artifactId>
+            <version>${netbar-transporter.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+        </dependency>
+    </dependencies>
+</project>

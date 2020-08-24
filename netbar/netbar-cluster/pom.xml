@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>netbar</artifactId>
+        <groupId>org.wc.midware</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.wc.midware</groupId>
+    <artifactId>netbar-cluster</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <name>netbar-cluster</name>
+    <url>http://www.example.com</url>
+
+    <properties>
+        <netbar-api.version>1.0-SNAPSHOT</netbar-api.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.wc.midware</groupId>
+            <artifactId>netbar-api</artifactId>
+            <version>${netbar-api.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
